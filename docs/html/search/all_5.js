@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['hexgrid',['HexGrid',['../classca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_hex_grid.html',1,'ca::axoninteractive::Geometry::HexGrid']]],
-  ['hexgrid',['HexGrid',['../classca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_hex_grid.html#a720a41ec42509c0d9eac6f19a48f3b95',1,'ca::axoninteractive::Geometry::HexGrid::HexGrid']]],
-  ['hexgrid_2ecs',['HexGrid.cs',['../_hex_grid_8cs.html',1,'']]],
-  ['hexradius',['HexRadius',['../classca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_hex_grid.html#a66b602a99507865481a70aab124ec322',1,'ca::axoninteractive::Geometry::HexGrid::HexGrid']]]
+  ['gethashcode',['GetHashCode',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_axial_hex_coord.html#a3ee58b4f90800987758f553d171a1e4b',1,'ca.axoninteractive.Geometry.HexGrid.AxialHexCoord.GetHashCode()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#ad94effe99de437643552b742e9e1be02',1,'ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.GetHashCode()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#ad4bc30f4610cbb221a415acf2efe40cc',1,'ca.axoninteractive.Geometry.HexGrid.OffsetHexCoord.GetHashCode()']]]
 ];

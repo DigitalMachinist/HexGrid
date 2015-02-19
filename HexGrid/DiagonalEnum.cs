@@ -1,10 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ca.axoninteractive.Geometry.HexGrid
 {
+	/// <summary>
+	/// Represents a diagonal hex (see http://www.redblobgames.com/grids/hexagons/), relative to
+	/// a central pointy-topped hex. Note that cardinal directions are used here to make these 
+	/// easier to distinguish.
+	/// </summary>
 	public enum DiagonalEnum : int
 	{
 		ESE = 0,

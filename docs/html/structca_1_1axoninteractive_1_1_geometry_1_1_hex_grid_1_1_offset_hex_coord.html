@@ -116,22 +116,42 @@ $(document).ready(function(){initNavTree('structca_1_1axoninteractive_1_1_geomet
 <div class="title">ca.axoninteractive.Geometry.HexGrid.OffsetHexCoord Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme. This means that all hexes are pointy-topped and each odd row is offset in the positive q direction by half of a hex width. Offset coordinates are a natural fit for storage in a rectangular array of memory, and can be an ideal storage format for hexes.  
+ <a href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9dac64d2734a630ec6a522e4bcd3fd0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#a9dac64d2734a630ec6a522e4bcd3fd0a">OffsetHexCoord</a> (int <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#ae2eaf3e6401e59fb85b7eff9fe9c0ad6">q</a>, int <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#a34ff5972f1ba5b133ebae4348551e31f">r</a>)</td></tr>
+<tr class="memdesc:a9dac64d2734a630ec6a522e4bcd3fd0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> given the coordinates q and r.  <a href="#a9dac64d2734a630ec6a522e4bcd3fd0a">More...</a><br /></td></tr>
 <tr class="separator:a9dac64d2734a630ec6a522e4bcd3fd0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ff61ed126d844c6a6285a907cd0c8d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_axial_hex_coord.html">AxialHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#a4ff61ed126d844c6a6285a907cd0c8d5">ToAxial</a> ()</td></tr>
+<tr class="memdesc:a4ff61ed126d844c6a6285a907cd0c8d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return this hex as an <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_axial_hex_coord.html" title="Represents the position of a hex within a hex grid using axial coordinates (q = East, r = Southeast). This results in a grid with a naturally parallelgraphic form, but can still be stored in a regtangular array resulting in a small number of wasted cells. ">AxialHexCoord</a>.  <a href="#a4ff61ed126d844c6a6285a907cd0c8d5">More...</a><br /></td></tr>
 <tr class="separator:a4ff61ed126d844c6a6285a907cd0c8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc0aff9104b8a35bf6357cf610daddc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#afc0aff9104b8a35bf6357cf610daddc7">ToCubic</a> ()</td></tr>
+<tr class="memdesc:afc0aff9104b8a35bf6357cf610daddc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return this hex as a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>.  <a href="#afc0aff9104b8a35bf6357cf610daddc7">More...</a><br /></td></tr>
 <tr class="separator:afc0aff9104b8a35bf6357cf610daddc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4bc30f4610cbb221a415acf2efe40cc"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#ad4bc30f4610cbb221a415acf2efe40cc">GetHashCode</a> ()</td></tr>
+<tr class="memdesc:ad4bc30f4610cbb221a415acf2efe40cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a hash reflecting the contents of the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a>.  <a href="#ad4bc30f4610cbb221a415acf2efe40cc">More...</a><br /></td></tr>
+<tr class="separator:ad4bc30f4610cbb221a415acf2efe40cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62e50c13f6bdba70ab3565e570d25893"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#a62e50c13f6bdba70ab3565e570d25893">Equals</a> (object obj)</td></tr>
+<tr class="memdesc:a62e50c13f6bdba70ab3565e570d25893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> is equal to an arbitrary object.  <a href="#a62e50c13f6bdba70ab3565e570d25893">More...</a><br /></td></tr>
+<tr class="separator:a62e50c13f6bdba70ab3565e570d25893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9ece2d21b1b8b6feca5cab67665ce7a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#ad9ece2d21b1b8b6feca5cab67665ce7a">operator+</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a> lhs, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a> rhs)</td></tr>
+<tr class="memdesc:ad9ece2d21b1b8b6feca5cab67665ce7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add 2 OffsetHexCoords together and return the result.  <a href="#ad9ece2d21b1b8b6feca5cab67665ce7a">More...</a><br /></td></tr>
 <tr class="separator:ad9ece2d21b1b8b6feca5cab67665ce7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07b1ec3cf0d0c49929025e5cf4a12232"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#a07b1ec3cf0d0c49929025e5cf4a12232">operator-</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a> lhs, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a> rhs)</td></tr>
+<tr class="memdesc:a07b1ec3cf0d0c49929025e5cf4a12232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract 1 <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> from another and return the result.  <a href="#a07b1ec3cf0d0c49929025e5cf4a12232">More...</a><br /></td></tr>
 <tr class="separator:a07b1ec3cf0d0c49929025e5cf4a12232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03d9ec3e9c4e90a1c29b74c3d56ea25a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#a03d9ec3e9c4e90a1c29b74c3d56ea25a">operator==</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a> lhs, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a> rhs)</td></tr>
+<tr class="memdesc:a03d9ec3e9c4e90a1c29b74c3d56ea25a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if 2 OffsetHexCoords represent the same hex on the grid.  <a href="#a03d9ec3e9c4e90a1c29b74c3d56ea25a">More...</a><br /></td></tr>
+<tr class="separator:a03d9ec3e9c4e90a1c29b74c3d56ea25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5028d7dec1f0c5ca8cb48fd478b22d38"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#a5028d7dec1f0c5ca8cb48fd478b22d38">operator!=</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a> lhs, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a> rhs)</td></tr>
+<tr class="memdesc:a5028d7dec1f0c5ca8cb48fd478b22d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if 2 OffsetHexCoords represent the different hexes on the grid.  <a href="#a5028d7dec1f0c5ca8cb48fd478b22d38">More...</a><br /></td></tr>
+<tr class="separator:a5028d7dec1f0c5ca8cb48fd478b22d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -142,12 +162,17 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a83b7aebe2b2a3588b7b52421bf521f7a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#a83b7aebe2b2a3588b7b52421bf521f7a">IsOdd</a><code> [get]</code></td></tr>
-<tr class="separator:a83b7aebe2b2a3588b7b52421bf521f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64e78aeb6aa505043cb6f998954cbf88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#a64e78aeb6aa505043cb6f998954cbf88">Parity</a><code> [get]</code></td></tr>
-<tr class="separator:a64e78aeb6aa505043cb6f998954cbf88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29a0ea23e8eb07df007b77a5af8da86d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#a29a0ea23e8eb07df007b77a5af8da86d">IsOddRow</a><code> [get]</code></td></tr>
+<tr class="memdesc:a29a0ea23e8eb07df007b77a5af8da86d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether or not this hex belongs to an odd-numbered row.  <a href="#a29a0ea23e8eb07df007b77a5af8da86d">More...</a><br /></td></tr>
+<tr class="separator:a29a0ea23e8eb07df007b77a5af8da86d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a0281ce0acadac17f4a2e8a87fb10d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#af6431f0a86d59205e4f9d7743b7f4dfa">ParityEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html#ad0a0281ce0acadac17f4a2e8a87fb10d">RowParity</a><code> [get]</code></td></tr>
+<tr class="memdesc:ad0a0281ce0acadac17f4a2e8a87fb10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the row parity of the hex (whether its row number is even or odd).  <a href="#ad0a0281ce0acadac17f4a2e8a87fb10d">More...</a><br /></td></tr>
+<tr class="separator:ad0a0281ce0acadac17f4a2e8a87fb10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme. This means that all hexes are pointy-topped and each odd row is offset in the positive q direction by half of a hex width. Offset coordinates are a natural fit for storage in a rectangular array of memory, and can be an ideal storage format for hexes. </p>
+<p>This type is the least computationally efficient type to use for hex grid computations, as all of the work has to be done by the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> type and converting between <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> and <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> is the most computationally expensive of the type conversions provided by this library.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a9dac64d2734a630ec6a522e4bcd3fd0a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -172,9 +197,99 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create a new <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> given the coordinates q and r. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">q</td><td>The column position of the hex within the grid.</td></tr>
+    <tr><td class="paramname">r</td><td>The row position of the hex within the grid.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a62e50c13f6bdba70ab3565e570d25893"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool ca.axoninteractive.Geometry.HexGrid.OffsetHexCoord.Equals </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> is equal to an arbitrary object. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> and the given object are equal.</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad4bc30f4610cbb221a415acf2efe40cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int ca.axoninteractive.Geometry.HexGrid.OffsetHexCoord.GetHashCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a hash reflecting the contents of the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>An integer hash code reflecting the contents of the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a>.</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5028d7dec1f0c5ca8cb48fd478b22d38"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ca.axoninteractive.Geometry.HexGrid.OffsetHexCoord.operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a>&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if 2 OffsetHexCoords represent the different hexes on the grid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> on the left-hand side of the != sign.</td></tr>
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> on the right-hand side of the != sign.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A bool representing whether or not the OffsetHexCoords are unequal.</dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ad9ece2d21b1b8b6feca5cab67665ce7a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -206,6 +321,16 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Add 2 OffsetHexCoords together and return the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> on the left-hand side of the + sign.</td></tr>
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> on the right-hand side of the + sign.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> representing the sum of the inputs.</dd></dl>
 
 </div>
 </div>
@@ -241,6 +366,60 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Subtract 1 <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> from another and return the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> on the left-hand side of the - sign.</td></tr>
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> on the right-hand side of the - sign.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> representing the difference of the inputs.</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a03d9ec3e9c4e90a1c29b74c3d56ea25a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ca.axoninteractive.Geometry.HexGrid.OffsetHexCoord.operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a>&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if 2 OffsetHexCoords represent the same hex on the grid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> on the left-hand side of the == sign.</td></tr>
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> on the right-hand side of the == sign.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A bool representing whether or not the OffsetHexCoords are equal.</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a4ff61ed126d844c6a6285a907cd0c8d5"></a>
@@ -256,6 +435,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Return this hex as an <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_axial_hex_coord.html" title="Represents the position of a hex within a hex grid using axial coordinates (q = East, r = Southeast). This results in a grid with a naturally parallelgraphic form, but can still be stored in a regtangular array resulting in a small number of wasted cells. ">AxialHexCoord</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_axial_hex_coord.html" title="Represents the position of a hex within a hex grid using axial coordinates (q = East, r = Southeast). This results in a grid with a naturally parallelgraphic form, but can still be stored in a regtangular array resulting in a small number of wasted cells. ">AxialHexCoord</a> representing the hex.</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="afc0aff9104b8a35bf6357cf610daddc7"></a>
@@ -270,6 +452,9 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Return this hex as a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the hex.</dd></dl>
 
 </div>
 </div>
@@ -299,7 +484,7 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
-<a class="anchor" id="a83b7aebe2b2a3588b7b52421bf521f7a"></a>
+<a class="anchor" id="a29a0ea23e8eb07df007b77a5af8da86d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -307,7 +492,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool ca.axoninteractive.Geometry.HexGrid.OffsetHexCoord.IsOdd</td>
+          <td class="memname">bool ca.axoninteractive.Geometry.HexGrid.OffsetHexCoord.IsOddRow</td>
         </tr>
       </table>
   </td>
@@ -317,9 +502,11 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Return whether or not this hex belongs to an odd-numbered row. </p>
+
 </div>
 </div>
-<a class="anchor" id="a64e78aeb6aa505043cb6f998954cbf88"></a>
+<a class="anchor" id="ad0a0281ce0acadac17f4a2e8a87fb10d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -327,7 +514,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ca.axoninteractive.Geometry.HexGrid.OffsetHexCoord.Parity</td>
+          <td class="memname"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#af6431f0a86d59205e4f9d7743b7f4dfa">ParityEnum</a> ca.axoninteractive.Geometry.HexGrid.OffsetHexCoord.RowParity</td>
         </tr>
       </table>
   </td>
@@ -336,6 +523,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Return the row parity of the hex (whether its row number is even or odd). </p>
 
 </div>
 </div>
@@ -348,7 +537,7 @@ Properties</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceca.html">ca</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive.html">axoninteractive</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry.html">Geometry</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html">HexGrid</a></li><li class="navelem"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a></li>
-    <li class="footer">Generated on Thu Feb 19 2015 12:56:46 for HexGrid by
+    <li class="footer">Generated on Thu Feb 19 2015 17:54:37 for HexGrid by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9 </li>
   </ul>

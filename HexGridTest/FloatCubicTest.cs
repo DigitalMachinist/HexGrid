@@ -31,12 +31,6 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		#region Type Conversions
 
 		[Test]
-		public void ToCubic()
-		{
-			Assert.Inconclusive();
-		}
-
-		[Test]
 		public void ToFloatAxial()
 		{
 			Assert.Inconclusive();

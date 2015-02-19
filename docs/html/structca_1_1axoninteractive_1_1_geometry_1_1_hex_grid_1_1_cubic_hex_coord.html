@@ -115,67 +115,113 @@ $(document).ready(function(){initNavTree('structca_1_1axoninteractive_1_1_geomet
 <div class="title">ca.axoninteractive.Geometry.HexGrid.CubicHexCoord Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird, but it is comparable to representing 3D rotations with quaternions (in 4-space). This coordinate system is a bit less memory-efficient but enables simple algorithms for most hex grid operations. Because of this, the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> type contains basically all of the methods for operating on hexes. That being said, this data format is non-ideal for storage or end-use, so it is advised that the user transform their data into another coordinate system for use in most applications or storage in memory/to disk.  
+ <a href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad3f449092de3b9097d9b9fd155c9c6c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#ad3f449092de3b9097d9b9fd155c9c6c5">CubicHexCoord</a> (int <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a192cba2b6e6bd491366655188c9aee17">x</a>, int <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#ae4bb3906bcea346ffd9dc77db7cfff9b">y</a>, int <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a34d47841963fe24c3b5622b0bd938249">z</a>)</td></tr>
+<tr class="memdesc:ad3f449092de3b9097d9b9fd155c9c6c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> given the coordinates x, y and z.  <a href="#ad3f449092de3b9097d9b9fd155c9c6c5">More...</a><br /></td></tr>
 <tr class="separator:ad3f449092de3b9097d9b9fd155c9c6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6320df422e8823c104352e9af976e6b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_axial_hex_coord.html">AxialHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a6320df422e8823c104352e9af976e6b5">ToAxial</a> ()</td></tr>
+<tr class="memdesc:a6320df422e8823c104352e9af976e6b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return this hex as an <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_axial_hex_coord.html" title="Represents the position of a hex within a hex grid using axial coordinates (q = East, r = Southeast). This results in a grid with a naturally parallelgraphic form, but can still be stored in a regtangular array resulting in a small number of wasted cells. ">AxialHexCoord</a>.  <a href="#a6320df422e8823c104352e9af976e6b5">More...</a><br /></td></tr>
 <tr class="separator:a6320df422e8823c104352e9af976e6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09721b366bcd36890d112970314d3e75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html">OffsetHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a09721b366bcd36890d112970314d3e75">ToOffset</a> ()</td></tr>
+<tr class="memdesc:a09721b366bcd36890d112970314d3e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return this hex as an <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a>.  <a href="#a09721b366bcd36890d112970314d3e75">More...</a><br /></td></tr>
 <tr class="separator:a09721b366bcd36890d112970314d3e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94effe99de437643552b742e9e1be02"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#ad94effe99de437643552b742e9e1be02">GetHashCode</a> ()</td></tr>
+<tr class="memdesc:ad94effe99de437643552b742e9e1be02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a hash reflecting the contents of the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>.  <a href="#ad94effe99de437643552b742e9e1be02">More...</a><br /></td></tr>
+<tr class="separator:ad94effe99de437643552b742e9e1be02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65088def2c516f8aaf927b8b0767d93a"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a65088def2c516f8aaf927b8b0767d93a">Equals</a> (object obj)</td></tr>
+<tr class="memdesc:a65088def2c516f8aaf927b8b0767d93a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> is equal to an arbitrary object.  <a href="#a65088def2c516f8aaf927b8b0767d93a">More...</a><br /></td></tr>
+<tr class="separator:a65088def2c516f8aaf927b8b0767d93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78c1256a0b7653b720420d5153a8bc42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a78c1256a0b7653b720420d5153a8bc42">Diagonal</a> (<a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#a2c4ae19259e8979d4de04e72cfe55df2">DiagonalEnum</a> direction)</td></tr>
+<tr class="memdesc:a78c1256a0b7653b720420d5153a8bc42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the diagonal of this hex in the given diagonal direction.  <a href="#a78c1256a0b7653b720420d5153a8bc42">More...</a><br /></td></tr>
 <tr class="separator:a78c1256a0b7653b720420d5153a8bc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae69a053fb2282a70972e796aea2f5259"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#ae69a053fb2282a70972e796aea2f5259">Diagonals</a> ()</td></tr>
+<tr class="memdesc:ae69a053fb2282a70972e796aea2f5259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords representing this hex's diagonals (in clockwise order).  <a href="#ae69a053fb2282a70972e796aea2f5259">More...</a><br /></td></tr>
 <tr class="separator:ae69a053fb2282a70972e796aea2f5259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6a21979d80e7e734cc4aea2d1444d8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#aa6a21979d80e7e734cc4aea2d1444d8c">DistanceTo</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> other)</td></tr>
+<tr class="memdesc:aa6a21979d80e7e734cc4aea2d1444d8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum number of grid steps to get from this hex to the given hex.  <a href="#aa6a21979d80e7e734cc4aea2d1444d8c">More...</a><br /></td></tr>
 <tr class="separator:aa6a21979d80e7e734cc4aea2d1444d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60b492e82d32928729b01ae4f0d68cf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a60b492e82d32928729b01ae4f0d68cf8">LineTo</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> other)</td></tr>
+<tr class="memdesc:a60b492e82d32928729b01ae4f0d68cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords that form the straightest path from this hex to the given end. The hexes in the line are determined by forming a straight line from start to end and linearly interpolating and rounding each of the interpolated points to the nearest hex position.  <a href="#a60b492e82d32928729b01ae4f0d68cf8">More...</a><br /></td></tr>
 <tr class="separator:a60b492e82d32928729b01ae4f0d68cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c6e849219c7938d2ec1e92211281445"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a3c6e849219c7938d2ec1e92211281445">Neighbor</a> (<a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a> direction)</td></tr>
+<tr class="memdesc:a3c6e849219c7938d2ec1e92211281445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the neighbor of this hex in the given direction.  <a href="#a3c6e849219c7938d2ec1e92211281445">More...</a><br /></td></tr>
 <tr class="separator:a3c6e849219c7938d2ec1e92211281445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53be9b514eb6a4e86d3c483b16efdd06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a53be9b514eb6a4e86d3c483b16efdd06">Neighbors</a> ()</td></tr>
+<tr class="memdesc:a53be9b514eb6a4e86d3c483b16efdd06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords representing this hex's neighbors (in clockwise order).  <a href="#a53be9b514eb6a4e86d3c483b16efdd06">More...</a><br /></td></tr>
 <tr class="separator:a53be9b514eb6a4e86d3c483b16efdd06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f728fc17e3e82524a9bed9c878a591a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a4f728fc17e3e82524a9bed9c878a591a">RingAsCenter</a> (int range, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a> startDirection=DirectionEnum.E)</td></tr>
-<tr class="separator:a4f728fc17e3e82524a9bed9c878a591a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72b2dde96b7845eadb2dbc82aaa795b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a72b2dde96b7845eadb2dbc82aaa795b7">RotateAsCenter</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> toRotate, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#a118d8b5e1c751dd11e7249fe170486e9">RotationEnum</a> rotation)</td></tr>
-<tr class="separator:a72b2dde96b7845eadb2dbc82aaa795b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63b6416b2d11ad01631e461b2a16f86a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a63b6416b2d11ad01631e461b2a16f86a">RingAround</a> (int range, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a> startDirection=DirectionEnum.E)</td></tr>
+<tr class="memdesc:a63b6416b2d11ad01631e461b2a16f86a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords that appear at the given range around this hex. The ring begins from the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> range grid steps away from the center, heading in the given direction, and encircling the center in clockwise order.  <a href="#a63b6416b2d11ad01631e461b2a16f86a">More...</a><br /></td></tr>
+<tr class="separator:a63b6416b2d11ad01631e461b2a16f86a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8371358411a8d63e2481645d7eaf946e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a8371358411a8d63e2481645d7eaf946e">RotateAroundOther</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> center, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#a118d8b5e1c751dd11e7249fe170486e9">RotationEnum</a> rotation)</td></tr>
+<tr class="memdesc:a8371358411a8d63e2481645d7eaf946e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> around the given center by the given rotation (constrained to exact 60 degree rotation steps) and return the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> that represents the rotated position in the grid.  <a href="#a8371358411a8d63e2481645d7eaf946e">More...</a><br /></td></tr>
+<tr class="separator:a8371358411a8d63e2481645d7eaf946e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a443338dcde73cef5d18923c0abbaabc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a443338dcde73cef5d18923c0abbaabc6">RotateOtherAround</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> toRotate, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#a118d8b5e1c751dd11e7249fe170486e9">RotationEnum</a> rotation)</td></tr>
+<tr class="memdesc:a443338dcde73cef5d18923c0abbaabc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> around this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> by the given rotation (constrained to exact 60 degree rotation steps) and return the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> that represents the rotated position in the grid.  <a href="#a443338dcde73cef5d18923c0abbaabc6">More...</a><br /></td></tr>
+<tr class="separator:a443338dcde73cef5d18923c0abbaabc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af82b2222f6c4940ce468919b843ad0d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#af82b2222f6c4940ce468919b843ad0d0">Scale</a> (int factor)</td></tr>
+<tr class="memdesc:af82b2222f6c4940ce468919b843ad0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> by the given factor, such that the x, y and z values of the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> change proprtionally to the factor provided.  <a href="#af82b2222f6c4940ce468919b843ad0d0">More...</a><br /></td></tr>
 <tr class="separator:af82b2222f6c4940ce468919b843ad0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad811f2dd343899dcb98c681582a34666"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#ad811f2dd343899dcb98c681582a34666">SpiralInwardToCenter</a> (int range, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a> startDirection=DirectionEnum.E)</td></tr>
-<tr class="separator:ad811f2dd343899dcb98c681582a34666"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e13940be428352d42b398d1349aa33a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a8e13940be428352d42b398d1349aa33a">SpiralOutwardFromCenter</a> (int range, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a> startDirection=DirectionEnum.E)</td></tr>
-<tr class="separator:a8e13940be428352d42b398d1349aa33a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9937c093831861af717d82d6bf2777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a0b9937c093831861af717d82d6bf2777">SpiralAroundInward</a> (int range, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a> startDirection=DirectionEnum.E)</td></tr>
+<tr class="memdesc:a0b9937c093831861af717d82d6bf2777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords of a area centering around ths hex and extending in every direction up to the given range. The hexes are ordered starting from the center and then spiraling outward clockwise beginning from the neighbor in the given direction, until the outside ring is complete.  <a href="#a0b9937c093831861af717d82d6bf2777">More...</a><br /></td></tr>
+<tr class="separator:a0b9937c093831861af717d82d6bf2777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4a39dca285e485b4b7284e0f05fb645"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#af4a39dca285e485b4b7284e0f05fb645">SpiralAroundOutward</a> (int range, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a> startDirection=DirectionEnum.E)</td></tr>
+<tr class="memdesc:af4a39dca285e485b4b7284e0f05fb645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords of a area centering around this hex and extending in every direction up to the given range. The hexes are ordered starting from the maximum range, in the given direction, spiraling inward in a clockwise direction until the center is reached (and is the last element in the array).  <a href="#af4a39dca285e485b4b7284e0f05fb645">More...</a><br /></td></tr>
+<tr class="separator:af4a39dca285e485b4b7284e0f05fb645"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6900d86afb3ca26ee8476893b96233dc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a6900d86afb3ca26ee8476893b96233dc">operator+</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> lhs, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> rhs)</td></tr>
+<tr class="memdesc:a6900d86afb3ca26ee8476893b96233dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add 2 CubicHexCoords together and return the result.  <a href="#a6900d86afb3ca26ee8476893b96233dc">More...</a><br /></td></tr>
 <tr class="separator:a6900d86afb3ca26ee8476893b96233dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a503869d1cfa6955b878d6c34f7c3a155"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a503869d1cfa6955b878d6c34f7c3a155">operator-</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> lhs, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> rhs)</td></tr>
+<tr class="memdesc:a503869d1cfa6955b878d6c34f7c3a155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtract 1 <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> from another and return the result.  <a href="#a503869d1cfa6955b878d6c34f7c3a155">More...</a><br /></td></tr>
 <tr class="separator:a503869d1cfa6955b878d6c34f7c3a155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7156fd0863e197d4b3198c14d7837b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a1a7156fd0863e197d4b3198c14d7837b">operator==</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> lhs, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> rhs)</td></tr>
+<tr class="memdesc:a1a7156fd0863e197d4b3198c14d7837b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if 2 CubicHexCoords represent the same hex on the grid.  <a href="#a1a7156fd0863e197d4b3198c14d7837b">More...</a><br /></td></tr>
+<tr class="separator:a1a7156fd0863e197d4b3198c14d7837b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbbd74339ee8de05f2982467494122a5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#acbbd74339ee8de05f2982467494122a5">operator!=</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> lhs, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> rhs)</td></tr>
+<tr class="memdesc:acbbd74339ee8de05f2982467494122a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if 2 CubicHexCoords represent the different hexes on the grid.  <a href="#acbbd74339ee8de05f2982467494122a5">More...</a><br /></td></tr>
+<tr class="separator:acbbd74339ee8de05f2982467494122a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35ace93003b90620790fad4caf5c28a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a35ace93003b90620790fad4caf5c28a2">Area</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> center, int range)</td></tr>
+<tr class="memdesc:a35ace93003b90620790fad4caf5c28a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords within the given range from the given center (including the center itself) in no particular order.  <a href="#a35ace93003b90620790fad4caf5c28a2">More...</a><br /></td></tr>
 <tr class="separator:a35ace93003b90620790fad4caf5c28a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d07f963d7035d083db415c9676e5b51"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a8d07f963d7035d083db415c9676e5b51">DiagonalDiff</a> (<a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#a2c4ae19259e8979d4de04e72cfe55df2">DiagonalEnum</a> direction)</td></tr>
+<tr class="memdesc:a8d07f963d7035d083db415c9676e5b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the diff between some hex and its diagonal in the given diagonal direction.  <a href="#a8d07f963d7035d083db415c9676e5b51">More...</a><br /></td></tr>
 <tr class="separator:a8d07f963d7035d083db415c9676e5b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5f92ea595b2883be218bb6f79c40916"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#ac5f92ea595b2883be218bb6f79c40916">DirectionDiff</a> (<a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a> direction)</td></tr>
+<tr class="memdesc:ac5f92ea595b2883be218bb6f79c40916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the diff between some hex and its neighbor in the given direction.  <a href="#ac5f92ea595b2883be218bb6f79c40916">More...</a><br /></td></tr>
 <tr class="separator:ac5f92ea595b2883be218bb6f79c40916"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8279fa28408c1d76f0c4d9f5673c6a7e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a8279fa28408c1d76f0c4d9f5673c6a7e">IntersectRanges</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[] a, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[] b)</td></tr>
+<tr class="memdesc:a8279fa28408c1d76f0c4d9f5673c6a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords that represents the hexes belonging to both a and b.  <a href="#a8279fa28408c1d76f0c4d9f5673c6a7e">More...</a><br /></td></tr>
 <tr class="separator:a8279fa28408c1d76f0c4d9f5673c6a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2bdbe81a7359b931d3b26afd3d32716"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#ae2bdbe81a7359b931d3b26afd3d32716">Distance</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> a, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> b)</td></tr>
+<tr class="memdesc:ae2bdbe81a7359b931d3b26afd3d32716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum number of grid steps to get from a to b.  <a href="#ae2bdbe81a7359b931d3b26afd3d32716">More...</a><br /></td></tr>
 <tr class="separator:ae2bdbe81a7359b931d3b26afd3d32716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25b03809b10419cc92a5f4d6f5cae3a0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a25b03809b10419cc92a5f4d6f5cae3a0">Line</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> start, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> end)</td></tr>
+<tr class="memdesc:a25b03809b10419cc92a5f4d6f5cae3a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords that form the straightest path from the given start to the given end. The hexes in the line are determined by forming a straight line from start to end and linearly interpolating and rounding each of the interpolated points to the nearest hex position.  <a href="#a25b03809b10419cc92a5f4d6f5cae3a0">More...</a><br /></td></tr>
 <tr class="separator:a25b03809b10419cc92a5f4d6f5cae3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d56e8349419d5248721c85f90f37f85"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a4d56e8349419d5248721c85f90f37f85">Ring</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> center, int range, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a> startDirection=DirectionEnum.E)</td></tr>
+<tr class="memdesc:a4d56e8349419d5248721c85f90f37f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords that appear at the given range around the given center hex. The ring begins from the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> range grid steps away from the center, heading in the given direction, and encircling the center in clockwise order.  <a href="#a4d56e8349419d5248721c85f90f37f85">More...</a><br /></td></tr>
 <tr class="separator:a4d56e8349419d5248721c85f90f37f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac75dc6ba68b03d062869c13474ebded7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#ac75dc6ba68b03d062869c13474ebded7">Rotate</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> center, <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> toRotate, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#a118d8b5e1c751dd11e7249fe170486e9">RotationEnum</a> rotation)</td></tr>
+<tr class="memdesc:ac75dc6ba68b03d062869c13474ebded7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> around the given center by the given rotation (constrained to exact 60 degree rotation steps) and return the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> that represents the rotated position in the grid.  <a href="#ac75dc6ba68b03d062869c13474ebded7">More...</a><br /></td></tr>
 <tr class="separator:ac75dc6ba68b03d062869c13474ebded7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cd824a22866b8894124f0b158bfb93f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a8cd824a22866b8894124f0b158bfb93f">Round</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_float_cubic.html">FloatCubic</a> cubic)</td></tr>
+<tr class="memdesc:a8cd824a22866b8894124f0b158bfb93f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the nearest hex to the given a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_float_cubic.html" title="FloatCubic represents a pseudo-position on the hex grid. It does not directly represent the position ...">FloatCubic</a>.  <a href="#a8cd824a22866b8894124f0b158bfb93f">More...</a><br /></td></tr>
 <tr class="separator:a8cd824a22866b8894124f0b158bfb93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66f1095fb5a3ba0d7874486fa09d85d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a66f1095fb5a3ba0d7874486fa09d85d8">Scale</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> toScale, int factor)</td></tr>
+<tr class="memdesc:a66f1095fb5a3ba0d7874486fa09d85d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale the given <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> by the given factor, such that the x, y and z values of the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> change proprtionally to the factor provided.  <a href="#a66f1095fb5a3ba0d7874486fa09d85d8">More...</a><br /></td></tr>
 <tr class="separator:a66f1095fb5a3ba0d7874486fa09d85d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaedf19854b453046d138b6ebd48fc522"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#aaedf19854b453046d138b6ebd48fc522">SpiralInward</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> center, int range, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a> startDirection=DirectionEnum.E)</td></tr>
+<tr class="memdesc:aaedf19854b453046d138b6ebd48fc522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords of a area centering around the given center hex and extending in every direction up to the given range. The hexes are ordered starting from the center and then spiraling outward clockwise beginning from the neighbor in the given direction, until the outside ring is complete.  <a href="#aaedf19854b453046d138b6ebd48fc522">More...</a><br /></td></tr>
 <tr class="separator:aaedf19854b453046d138b6ebd48fc522"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa25f82f31a104d100201c6aedb012dee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#aa25f82f31a104d100201c6aedb012dee">SpiralOutward</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> center, int range, <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a> startDirection=DirectionEnum.E)</td></tr>
+<tr class="memdesc:aa25f82f31a104d100201c6aedb012dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of CubicHexCoords of a area centering around the given center hex and extending in every direction up to the given range. The hexes are ordered starting from the maximum range, in the given direction, spiraling inward in a clockwise direction until the center is reached (and is the last element in the array).  <a href="#aa25f82f31a104d100201c6aedb012dee">More...</a><br /></td></tr>
 <tr class="separator:aa25f82f31a104d100201c6aedb012dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -187,7 +233,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a34d47841963fe24c3b5622b0bd938249"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a34d47841963fe24c3b5622b0bd938249">z</a></td></tr>
 <tr class="separator:a34d47841963fe24c3b5622b0bd938249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird, but it is comparable to representing 3D rotations with quaternions (in 4-space). This coordinate system is a bit less memory-efficient but enables simple algorithms for most hex grid operations. Because of this, the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> type contains basically all of the methods for operating on hexes. That being said, this data format is non-ideal for storage or end-use, so it is advised that the user transform their data into another coordinate system for use in most applications or storage in memory/to disk. </p>
+<p>It is advisable to keep your hex position data structures as <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> type whenever possible. Since most of the computational work is done in cube-space, this type is the most efficient to use, but is the least practical for end-user grid implementations. Simply keep a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> to do the work and allow it to return results that you can convert to other types.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad3f449092de3b9097d9b9fd155c9c6c5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -217,6 +266,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Create a new <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> given the coordinates x, y and z. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The position on the x-axis in cube-space.</td></tr>
+    <tr><td class="paramname">y</td><td>The position on the y-axis in cube-space.</td></tr>
+    <tr><td class="paramname">z</td><td>The position on the z-axis in cube-space.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -253,6 +312,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns an array of CubicHexCoords within the given range from the given center (including the center itself) in no particular order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> around which the area is formed.</td></tr>
+    <tr><td class="paramname">range</td><td>The maximum number of grid steps away from the center that CubicHexCoords will be returned for.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An array of CubicHexCoords within the given range from the given center (including the center itself) in no particular order.</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a78c1256a0b7653b720420d5153a8bc42"></a>
@@ -268,6 +337,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the diagonal of this hex in the given diagonal direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>The diagonal direction of the requested neighbor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the diagonal of this hex in the given diagonal direction.</dd></dl>
 
 </div>
 </div>
@@ -293,6 +371,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the diff between some hex and its diagonal in the given diagonal direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>The diagonal direction to return a diff for.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the diff between some hex and its diagonal in the given diagonal direction.</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="ae69a053fb2282a70972e796aea2f5259"></a>
@@ -307,6 +394,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns an array of CubicHexCoords representing this hex's diagonals (in clockwise order). </p>
+<dl class="section return"><dt>Returns</dt><dd>An array of CubicHexCoords representing this hex's diagonals (in clockwise order).</dd></dl>
 
 </div>
 </div>
@@ -331,6 +421,15 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the diff between some hex and its neighbor in the given direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>The direction to return a diff for.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the diff between some hex and its neighbor in the given direction.</dd></dl>
 
 </div>
 </div>
@@ -366,6 +465,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the minimum number of grid steps to get from a to b. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Any <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>.</td></tr>
+    <tr><td class="paramname">b</td><td>Any <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer number of grid steps from a to b.</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="aa6a21979d80e7e734cc4aea2d1444d8c"></a>
@@ -381,6 +490,52 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the minimum number of grid steps to get from this hex to the given hex. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Any <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An integer number of grid steps from this hex to the given hex.</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a65088def2c516f8aaf927b8b0767d93a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.Equals </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> is equal to an arbitrary object. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether or not this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> and the given object are equal.</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad94effe99de437643552b742e9e1be02"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.GetHashCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a hash reflecting the contents of the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>An integer hash code reflecting the contents of the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>.</dd></dl>
 
 </div>
 </div>
@@ -416,6 +571,17 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns an array of CubicHexCoords that represents the hexes belonging to both a and b. </p>
+<p>THIS IS NOT YET IMPLEMENTED!</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>An array of CubicHexCoords representing an area or spiral of hexes. </td></tr>
+    <tr><td class="paramname">b</td><td>An array of CubicHexCoords representing an area or spiral of hexes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An array of CubicHexCoords that represents the hexes belonging to both a and b.</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a25b03809b10419cc92a5f4d6f5cae3a0"></a>
@@ -450,6 +616,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns an array of CubicHexCoords that form the straightest path from the given start to the given end. The hexes in the line are determined by forming a straight line from start to end and linearly interpolating and rounding each of the interpolated points to the nearest hex position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the first hex in the line.</td></tr>
+    <tr><td class="paramname">end</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the last hex in the line.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An array of CubicHexCoords ordered as a line from start to end.</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a60b492e82d32928729b01ae4f0d68cf8"></a>
@@ -465,6 +641,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns an array of CubicHexCoords that form the straightest path from this hex to the given end. The hexes in the line are determined by forming a straight line from start to end and linearly interpolating and rounding each of the interpolated points to the nearest hex position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the last hex in the line.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An array of CubicHexCoords ordered as a line from start to end.</dd></dl>
 
 </div>
 </div>
@@ -482,6 +667,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Returns a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the neighbor of this hex in the given direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>The direction of the requested neighbor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the neighbor of this hex in the given direction. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a53be9b514eb6a4e86d3c483b16efdd06"></a>
@@ -496,6 +690,53 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns an array of CubicHexCoords representing this hex's neighbors (in clockwise order). </p>
+<dl class="section return"><dt>Returns</dt><dd>An array of CubicHexCoords representing this hex's neighbors (in clockwise order).</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acbbd74339ee8de05f2982467494122a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if 2 CubicHexCoords represent the different hexes on the grid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> on the left-hand side of the != sign.</td></tr>
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> on the right-hand side of the != sign.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A bool representing whether or not the CubicHexCoords are unequal.</dd></dl>
 
 </div>
 </div>
@@ -531,6 +772,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Add 2 CubicHexCoords together and return the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> on the left-hand side of the + sign.</td></tr>
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> on the right-hand side of the + sign.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the sum of the inputs.</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a503869d1cfa6955b878d6c34f7c3a155"></a>
@@ -564,6 +815,60 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Subtract 1 <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> from another and return the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> on the left-hand side of the - sign.</td></tr>
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> on the right-hand side of the - sign.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the difference of the inputs.</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1a7156fd0863e197d4b3198c14d7837b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if 2 CubicHexCoords represent the same hex on the grid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> on the left-hand side of the == sign.</td></tr>
+    <tr><td class="paramname">rhs</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> on the right-hand side of the == sign.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A bool representing whether or not the CubicHexCoords are equal.</dd></dl>
 
 </div>
 </div>
@@ -605,14 +910,25 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns an array of CubicHexCoords that appear at the given range around the given center hex. The ring begins from the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> range grid steps away from the center, heading in the given direction, and encircling the center in clockwise order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> around which the ring is formed.</td></tr>
+    <tr><td class="paramname">range</td><td>The number of grid steps distance away from the center that the ring will be.</td></tr>
+    <tr><td class="paramname">startDirection</td><td>The direction in which the first <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> of the ring will appear in.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An array of CubicHexCoords ordered as a ring.</dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a4f728fc17e3e82524a9bed9c878a591a"></a>
+<a class="anchor" id="a63b6416b2d11ad01631e461b2a16f86a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> [] ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.RingAsCenter </td>
+          <td class="memname"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> [] ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.RingAround </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>range</em>, </td>
@@ -630,6 +946,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns an array of CubicHexCoords that appear at the given range around this hex. The ring begins from the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> range grid steps away from the center, heading in the given direction, and encircling the center in clockwise order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">range</td><td>The number of grid steps distance away from the center that the ring will be.</td></tr>
+    <tr><td class="paramname">startDirection</td><td>The direction in which the first <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> of the ring will appear in.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An array of CubicHexCoords ordered as a ring.</dd></dl>
 
 </div>
 </div>
@@ -671,14 +997,63 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Rotate a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> around the given center by the given rotation (constrained to exact 60 degree rotation steps) and return the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> that represents the rotated position in the grid. </p>
+<p>THIS IS NOT YET IMPLEMENTED!</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the rotation's pivot.</td></tr>
+    <tr><td class="paramname">toRotate</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> to be rotated around the pivot.</td></tr>
+    <tr><td class="paramname">rotation</td><td>The direction and magnitude of rotation to be applied (in exact 60 degree rotation steps.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the position of the rotated hex on the grid. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="a72b2dde96b7845eadb2dbc82aaa795b7"></a>
+<a class="anchor" id="a8371358411a8d63e2481645d7eaf946e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.RotateAsCenter </td>
+          <td class="memname"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.RotateAroundOther </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#a118d8b5e1c751dd11e7249fe170486e9">RotationEnum</a>&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotate this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> around the given center by the given rotation (constrained to exact 60 degree rotation steps) and return the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> that represents the rotated position in the grid. </p>
+<p>THIS IS NOT YET IMPLEMENTED!</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> to be rotated around this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>.</td></tr>
+    <tr><td class="paramname">rotation</td><td>The direction and magnitude of rotation to be applied (in exact 60 degree rotation steps.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the position of the rotated hex on the grid. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a443338dcde73cef5d18923c0abbaabc6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.RotateOtherAround </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td>
           <td class="paramname"><em>toRotate</em>, </td>
@@ -696,6 +1071,17 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Rotate a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> around this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> by the given rotation (constrained to exact 60 degree rotation steps) and return the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> that represents the rotated position in the grid. </p>
+<p>THIS IS NOT YET IMPLEMENTED!</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">toRotate</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> to be rotated around this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>.</td></tr>
+    <tr><td class="paramname">rotation</td><td>The direction and magnitude of rotation to be applied (in exact 60 degree rotation steps.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the position of the rotated hex on the grid. </dd></dl>
 
 </div>
 </div>
@@ -721,6 +1107,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Return a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the nearest hex to the given a <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_float_cubic.html" title="FloatCubic represents a pseudo-position on the hex grid. It does not directly represent the position ...">FloatCubic</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cubic</td><td>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_float_cubic.html" title="FloatCubic represents a pseudo-position on the hex grid. It does not directly represent the position ...">FloatCubic</a> to be rounded.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> representing the nearest Hex to the given <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_float_cubic.html" title="FloatCubic represents a pseudo-position on the hex grid. It does not directly represent the position ...">FloatCubic</a>. </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="af82b2222f6c4940ce468919b843ad0d0"></a>
@@ -736,6 +1131,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Scale this <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> by the given factor, such that the x, y and z values of the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> change proprtionally to the factor provided. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">factor</td><td>A multiplicative factor to scale by.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new scaled <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>.</dd></dl>
 
 </div>
 </div>
@@ -770,6 +1174,90 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Scale the given <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> by the given factor, such that the x, y and z values of the <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> change proprtionally to the factor provided. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">toScale</td><td>Any <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>.</td></tr>
+    <tr><td class="paramname">factor</td><td>A multiplicative factor to scale by.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new scaled <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a>.</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0b9937c093831861af717d82d6bf2777"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> [] ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.SpiralAroundInward </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a>&#160;</td>
+          <td class="paramname"><em>startDirection</em> = <code>DirectionEnum.E</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an array of CubicHexCoords of a area centering around ths hex and extending in every direction up to the given range. The hexes are ordered starting from the center and then spiraling outward clockwise beginning from the neighbor in the given direction, until the outside ring is complete. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">range</td><td>The number of grid steps distance away from the center that the edge of the spiral will be.</td></tr>
+    <tr><td class="paramname">startDirection</td><td>The direction in which the first <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> of the spiral will appear in.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An array of CubicHexCoords ordered as a spiral, beginning from the center and proceeding clockwise until it reaches the outside of the spiral.</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af4a39dca285e485b4b7284e0f05fb645"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> [] ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.SpiralAroundOutward </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a>&#160;</td>
+          <td class="paramname"><em>startDirection</em> = <code>DirectionEnum.E</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an array of CubicHexCoords of a area centering around this hex and extending in every direction up to the given range. The hexes are ordered starting from the maximum range, in the given direction, spiraling inward in a clockwise direction until the center is reached (and is the last element in the array). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">range</td><td>The number of grid steps distance away from the center that the edge of the spiral will be.</td></tr>
+    <tr><td class="paramname">startDirection</td><td>The direction in which the first <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> of the spiral will appear in.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><p class="startdd">An array of CubicHexCoords ordered as a spiral, beginning from the outside and proceeding clockwise until it reaches the center of the spiral.</p>
+<p class="enddd"></p>
+</dd></dl>
 
 </div>
 </div>
@@ -811,31 +1299,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="ad811f2dd343899dcb98c681582a34666"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> [] ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.SpiralInwardToCenter </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>range</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a>&#160;</td>
-          <td class="paramname"><em>startDirection</em> = <code>DirectionEnum.E</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Returns an array of CubicHexCoords of a area centering around the given center hex and extending in every direction up to the given range. The hexes are ordered starting from the center and then spiraling outward clockwise beginning from the neighbor in the given direction, until the outside ring is complete. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> around which the spiral is formed.</td></tr>
+    <tr><td class="paramname">range</td><td>The number of grid steps distance away from the center that the edge of the spiral will be.</td></tr>
+    <tr><td class="paramname">startDirection</td><td>The direction in which the first <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> of the spiral will appear in.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An array of CubicHexCoords ordered as a spiral, beginning from the center and proceeding clockwise until it reaches the outside of the spiral.</dd></dl>
 
 </div>
 </div>
@@ -877,31 +1350,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="a8e13940be428352d42b398d1349aa33a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a> [] ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.SpiralOutwardFromCenter </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>range</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#aed97e9ac6a6a0a6b28ea77ed4cce05a1">DirectionEnum</a>&#160;</td>
-          <td class="paramname"><em>startDirection</em> = <code>DirectionEnum.E</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Returns an array of CubicHexCoords of a area centering around the given center hex and extending in every direction up to the given range. The hexes are ordered starting from the maximum range, in the given direction, spiraling inward in a clockwise direction until the center is reached (and is the last element in the array). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">center</td><td>The <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> around which the spiral is formed.</td></tr>
+    <tr><td class="paramname">range</td><td>The number of grid steps distance away from the center that the edge of the spiral will be.</td></tr>
+    <tr><td class="paramname">startDirection</td><td>The direction in which the first <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html" title="Represents the position of a hex within a hex grid using cube-space coordinates. This is a bit weird...">CubicHexCoord</a> of the spiral will appear in.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An array of CubicHexCoords ordered as a spiral, beginning from the outside and proceeding clockwise until it reaches the center of the spiral.</dd></dl>
 
 </div>
 </div>
@@ -918,6 +1376,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Return this hex as an <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_axial_hex_coord.html" title="Represents the position of a hex within a hex grid using axial coordinates (q = East, r = Southeast). This results in a grid with a naturally parallelgraphic form, but can still be stored in a regtangular array resulting in a small number of wasted cells. ">AxialHexCoord</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_axial_hex_coord.html" title="Represents the position of a hex within a hex grid using axial coordinates (q = East, r = Southeast). This results in a grid with a naturally parallelgraphic form, but can still be stored in a regtangular array resulting in a small number of wasted cells. ">AxialHexCoord</a> representing the hex.</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a09721b366bcd36890d112970314d3e75"></a>
@@ -932,6 +1393,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Return this hex as an <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_offset_hex_coord.html" title="Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme...">OffsetHexCoord</a> representing the hex.</dd></dl>
 
 </div>
 </div>
@@ -981,7 +1445,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceca.html">ca</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive.html">axoninteractive</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry.html">Geometry</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html">HexGrid</a></li><li class="navelem"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html">CubicHexCoord</a></li>
-    <li class="footer">Generated on Thu Feb 19 2015 12:56:46 for HexGrid by
+    <li class="footer">Generated on Thu Feb 19 2015 17:54:37 for HexGrid by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9 </li>
   </ul>

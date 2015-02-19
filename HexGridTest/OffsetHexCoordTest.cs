@@ -68,6 +68,12 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 			Assert.Inconclusive();
 		}
 
+		[Test]
+		public void OperatorOverloadEquals()
+		{
+			Assert.Inconclusive();
+		}
+
 		#endregion
 	}
 }

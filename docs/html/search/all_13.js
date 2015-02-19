@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z',['z',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#a34d47841963fe24c3b5622b0bd938249',1,'ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.z()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_float_cubic.html#aae3be96e9607daae525b860f04953338',1,'ca.axoninteractive.Geometry.HexGrid.FloatCubic.z()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_vec2_d.html#aa1088a02ada17c58e515d50b9159a6db',1,'ca.axoninteractive.Geometry.HexGrid.Vec2D.z()']]]
+  ['y',['y',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#ae4bb3906bcea346ffd9dc77db7cfff9b',1,'ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.y()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_float_cubic.html#a8935e0b89d4e13140ba7ff446ce9630a',1,'ca.axoninteractive.Geometry.HexGrid.FloatCubic.y()']]]
 ];

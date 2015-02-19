@@ -52,6 +52,12 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 			Assert.Inconclusive();
 		}
 
+		[Test]
+		public void OperatorOverloadEquals()
+		{
+			Assert.Inconclusive();
+		}
+
 		#endregion
 
 		#region Instance Methods
@@ -93,13 +99,19 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		}
 		
 		[Test]
-		public void RingAsCenter()
+		public void RingAround()
 		{
 			Assert.Inconclusive();
 		}
 		
 		[Test]
-		public void RotateAsCenter()
+		public void RotateAroundOther()
+		{
+			Assert.Inconclusive();
+		}
+		
+		[Test]
+		public void RotateOtherAround()
 		{
 			Assert.Inconclusive();
 		}
@@ -111,13 +123,13 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		}
 		
 		[Test]
-		public void SpiralInwardToCenter()
+		public void SpiralAroundInward()
 		{
 			Assert.Inconclusive();
 		}
 		
 		[Test]
-		public void SpiralOutwardFromCenter()
+		public void SpiralAroundOutward()
 		{
 			Assert.Inconclusive();
 		}

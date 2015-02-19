@@ -77,7 +77,7 @@ namespace ca.axoninteractive.Geometry.HexGrid
 		OffsetToPoint( OffsetHexCoord hex )
 		{
 			float x = HexRadius * 1.5f * hex.r;
-			float z = HexRadius * SQRT_3 * ( hex.q + 0.5f * hex.Parity );
+			float z = HexRadius * SQRT_3 * ( hex.q + 0.5f * (float)hex.RowParity );
 
 			return new Vec2D( x, z );
 		}
