@@ -26,6 +26,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		public int z;
 
 		#endregion
+
+
 		#region Constants
 
 		private static readonly CubicHexCoord[] DIAGONALS = {
@@ -47,6 +49,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		};
 
 		#endregion
+
+
 		#region Constructors
 		
 		/// <summary>
@@ -63,6 +67,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+
+
 		#region Type Conversions
 
 		/// <summary>
@@ -92,6 +98,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+
+
 		#region Operator Overloads
 		
 		/// <summary>
@@ -194,8 +202,24 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+
+
 		#region Instance Methods
 		
+		/// <summary>
+		/// Returns an array of CubicHexCoords within the given range from this hex (including 
+		/// this hex) in no particular order.
+		/// </summary>
+		/// <param name="range">The maximum number of grid steps away from this hex that 
+		/// CubicHexCoords will be returned for.</param>
+		/// <returns>An array of CubicHexCoords within the given range from this hex (including 
+		/// this hex) in no particular order.</returns>
+		public CubicHexCoord[] AreaAround( int range )
+		{
+			return CubicHexCoord.Area( this, range );
+		}
+
+
 		/// <summary>
 		/// Returns a CubicHexCoord representing the diagonal of this hex in the given diagonal 
 		/// direction.
@@ -342,7 +366,11 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// <returns>A new scaled CubicHexCoord.</returns>
 		public CubicHexCoord Scale( int factor )
 		{
-			return CubicHexCoord.Scale( this, factor );
+			return new CubicHexCoord(
+				this.x * factor,
+				this.y * factor,
+				this.z * factor
+			);
 		}
 
 		
@@ -383,6 +411,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+
+
 		#region Static Methods
 		
 		/// <summary>
@@ -450,6 +480,7 @@ namespace ca.axoninteractive.Geometry.Hex
 
 		
 		/// <remarks>THIS IS NOT YET IMPLEMENTED!</remarks>
+		/// <see cref="http://www.redblobgames.com/grids/hexagons/"/>
 		/// <summary>
 		/// Returns an array of CubicHexCoords that represents the hexes belonging to both a and b.
 		/// </summary>
@@ -461,7 +492,6 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// and b.</returns>
 		public static CubicHexCoord[] IntersectRanges( CubicHexCoord[] a, CubicHexCoord[] b )
 		{
-			// See http://www.redblobgames.com/grids/hexagons/ (Heading: Intersecting ranges)
 			throw new NotImplementedException( "Feature not suppored yet!" );
 		}
 
@@ -530,7 +560,7 @@ namespace ca.axoninteractive.Geometry.Hex
 			
 			CubicHexCoord[] result = new CubicHexCoord[ 6 * range ];
 
-			CubicHexCoord cube = center + CubicHexCoord.Scale( DIRECTIONS[ (int)startDirection ], range );
+			CubicHexCoord cube = center + DIRECTIONS[ (int)startDirection ].Scale( range );
 
 			for ( int i = 0; i < 6; i++ )
 			{
@@ -546,6 +576,7 @@ namespace ca.axoninteractive.Geometry.Hex
 
 		
 		/// <remarks>THIS IS NOT YET IMPLEMENTED!</remarks>
+		/// <see cref="http://www.redblobgames.com/grids/hexagons/"/>
 		/// <summary>
 		/// Rotate a CubicHexCoord around the given center by the given rotation (constrained to 
 		/// exact 60 degree rotation steps) and return the CubicHexCoord that represents the 
@@ -559,7 +590,6 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// </returns>
 		public static CubicHexCoord Rotate( CubicHexCoord center, CubicHexCoord toRotate, RotationEnum rotation )
 		{
-			// See http://www.redblobgames.com/grids/hexagons/ (Heading: Rotation)
 			throw new NotImplementedException( "Feature not suppored yet!" );
 		}
 
@@ -594,23 +624,6 @@ namespace ca.axoninteractive.Geometry.Hex
 			}
 
 			return new CubicHexCoord( rx, ry, rz );
-		}
-
-		
-		/// <summary>
-		/// Scale the given CubicHexCoord by the given factor, such that the x, y and z values of 
-		/// the CubicHexCoord change proprtionally to the factor provided.
-		/// </summary>
-		/// <param name="toScale">Any CubicHexCoord.</param>
-		/// <param name="factor">A multiplicative factor to scale by.</param>
-		/// <returns>A new scaled CubicHexCoord.</returns>
-		public static CubicHexCoord Scale( CubicHexCoord toScale, int factor )
-		{
-			return new CubicHexCoord(
-				toScale.x * factor,
-				toScale.y * factor,
-				toScale.z * factor
-			);
 		}
 
 		

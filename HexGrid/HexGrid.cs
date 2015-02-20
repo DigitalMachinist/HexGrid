@@ -17,12 +17,14 @@ namespace ca.axoninteractive.Geometry.Hex
 
 		#endregion
 
+
 		#region Constants
 
 		public const float SQRT_3 = 1.7320508075688772935274463415059f;
 		public const float TWO_THIRDS = 2f / 3f;
 		
 		#endregion
+
 
 		#region Properties
 
@@ -34,6 +36,7 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+
 
 		#region Constructors
 
@@ -49,6 +52,7 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+
 
 		#region Instance Methods
 
