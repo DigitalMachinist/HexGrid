@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using ca.axoninteractive.Geometry.Hex;
 
 namespace ca.axoninteractive.Geometry.HexGridTest
 {
@@ -9,15 +10,23 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		#region Properties
 
 		[Test]
-		public void PropertyIsOdd()
+		public void PropertyIsOddRow()
 		{
-			Assert.Inconclusive();
+			bool isTrue  = new OffsetHexCoord( 1, 2 ).IsOddRow;
+			bool isFalse = new OffsetHexCoord( 2, 2 ).IsOddRow;
+			
+			Assert.That( isTrue,  Is.True  );
+			Assert.That( isFalse, Is.False );
 		}
 
 		[Test]
-		public void PropertyParity()
+		public void PropertyRowParity()
 		{
-			Assert.Inconclusive();
+			ParityEnum odd  = new OffsetHexCoord( 1, 2 ).RowParity;
+			ParityEnum even = new OffsetHexCoord( 2, 2 ).RowParity;
+			
+			Assert.That( odd,  Is.EqualTo( ParityEnum.Odd )  );
+			Assert.That( even, Is.EqualTo( ParityEnum.Even ) );
 		}
 
 		#endregion
@@ -27,13 +36,19 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void ConstructorQR()
 		{
-			Assert.Inconclusive();
+			OffsetHexCoord offset = new OffsetHexCoord( 1, 2 );
+
+			Assert.That( offset.q, Is.EqualTo( 1 ) );
+			Assert.That( offset.r, Is.EqualTo( 2 ) );
 		}
 
 		[Test]
 		public void ConstructorParameterless()
 		{
-			Assert.Inconclusive();
+			OffsetHexCoord offset = new OffsetHexCoord();
+
+			Assert.That( offset.q, Is.EqualTo( 0 ) );
+			Assert.That( offset.r, Is.EqualTo( 0 ) );
 		}
 
 		#endregion
@@ -41,15 +56,21 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		#region Type Conversions
 
 		[Test]
-		public void ToAxial()
-		{
-			Assert.Inconclusive();
-		}
-
-		[Test]
 		public void ToCubic()
 		{
-			Assert.Inconclusive();
+			// Odd row
+			CubicHexCoord cubic = new AxialHexCoord( 1, 2 ).ToCubic();
+
+			Assert.That( cubic.x, Is.EqualTo(  2 ) );
+			Assert.That( cubic.y, Is.EqualTo( -3 ) );
+			Assert.That( cubic.z, Is.EqualTo(  1 ) );
+
+			// Even row
+			cubic = new AxialHexCoord( 2, 3 ).ToCubic();
+
+			Assert.That( cubic.x, Is.EqualTo(  2 ) );
+			Assert.That( cubic.y, Is.EqualTo( -4 ) );
+			Assert.That( cubic.z, Is.EqualTo(  2 ) );
 		}
 
 		#endregion
@@ -59,19 +80,39 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void OperatorOverloadPlus()
 		{
-			Assert.Inconclusive();
+			OffsetHexCoord offset = new OffsetHexCoord( 1, 2 ) + new OffsetHexCoord( 3, 4 );
+
+			Assert.That( offset.q, Is.EqualTo( 4 ) );
+			Assert.That( offset.r, Is.EqualTo( 6 ) );
 		}
 
 		[Test]
 		public void OperatorOverloadMinus()
 		{
-			Assert.Inconclusive();
+			OffsetHexCoord offset = new OffsetHexCoord( 4, 3 ) - new OffsetHexCoord( 1, 2 );
+
+			Assert.That( offset.q, Is.EqualTo( 3 ) );
+			Assert.That( offset.r, Is.EqualTo( 1 ) );
 		}
 
 		[Test]
 		public void OperatorOverloadEquals()
 		{
-			Assert.Inconclusive();
+			bool isTrue  = new OffsetHexCoord( 1, 2 ) == new OffsetHexCoord( 1, 2 );
+			bool isFalse = new OffsetHexCoord( 1, 2 ) == new OffsetHexCoord( 3, 4 );
+
+			Assert.That( isTrue,  Is.True  );
+			Assert.That( isFalse, Is.False );
+		}
+
+		[Test]
+		public void OperatorOverloadNotEquals()
+		{
+			bool isTrue  = new OffsetHexCoord( 1, 2 ) != new OffsetHexCoord( 3, 4 );
+			bool isFalse = new OffsetHexCoord( 1, 2 ) != new OffsetHexCoord( 1, 2 );
+			
+			Assert.That( isTrue,  Is.True  );
+			Assert.That( isFalse, Is.False );
 		}
 
 		#endregion

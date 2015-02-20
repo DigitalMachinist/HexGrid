@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace ca.axoninteractive.Geometry.HexGrid
+namespace ca.axoninteractive.Geometry.Hex
 {
 	/// <summary>
 	/// Represents the position of a hex within a hex grid using the Odd-Row offset grid layout
@@ -78,18 +78,6 @@ namespace ca.axoninteractive.Geometry.HexGrid
 		#region Type Conversions
 		
 		/// <summary>
-		/// Return this hex as an AxialHexCoord.
-		/// </summary>
-		/// <returns>An AxialHexCoord representing the hex.</returns>
-		public 
-		AxialHexCoord 
-		ToAxial()
-		{
-			return this.ToCubic().ToAxial();
-		}
-
-		
-		/// <summary>
 		/// Return this hex as a CubicHexCoord.
 		/// </summary>
 		/// <returns>A CubicHexCoord representing the hex.</returns>
@@ -97,8 +85,9 @@ namespace ca.axoninteractive.Geometry.HexGrid
 		CubicHexCoord 
 		ToCubic()
 		{
-			int x = this.q - ( this.r - ( this.r & 1 ) ) / 2;
-			int z = this.r;
+			// Made a scary change here. Expect this to break!
+			int x = this.r - ( this.q - ( this.q & 1 ) ) / 2;
+			int z = this.q;
 			int y = -x - z;
 
 			return new CubicHexCoord( x, y, z );

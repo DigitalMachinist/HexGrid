@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ca.axoninteractive.Geometry.HexGrid
+namespace ca.axoninteractive.Geometry.Hex
 {
 	/// <summary>
 	/// Represents a rotation either clockwise or counter-clockwise around a central point. 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ca.axoninteractive.Geometry.HexGrid
+namespace ca.axoninteractive.Geometry.Hex
 {
 	/// <summary>
 	/// Represents directionality in the context of a pointy-topped hexagon's faces, where each

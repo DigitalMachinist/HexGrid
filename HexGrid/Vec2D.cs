@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ca.axoninteractive.Geometry.HexGrid
+namespace ca.axoninteractive.Geometry.Hex
 {
 	/// <summary>
 	/// A simple 2D vector implementation to store coordinates on the x-z cartesian plane.

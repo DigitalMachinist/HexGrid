@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace ca.axoninteractive.Geometry.HexGrid
+namespace ca.axoninteractive.Geometry.Hex
 {
 	/// <summary>
 	/// A logical hex-grid implementation based on Amit Patel's examples at 
@@ -19,8 +19,8 @@ namespace ca.axoninteractive.Geometry.HexGrid
 
 		#region Constants
 
-		const float SQRT_3 = 1.7320508075688772935274463415059f;
-		const float TWO_THIRDS = 2f / 3f;
+		public const float SQRT_3 = 1.7320508075688772935274463415059f;
+		public const float TWO_THIRDS = 2f / 3f;
 		
 		#endregion
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace ca.axoninteractive.Geometry.HexGrid
+namespace ca.axoninteractive.Geometry.Hex
 {
 	/// <summary>
 	/// Represents the position of a hex within a hex grid using axial coordinates (q = East, 
@@ -62,18 +62,6 @@ namespace ca.axoninteractive.Geometry.HexGrid
 			int y = -x - z;
 
 			return new CubicHexCoord( x, y, z );
-		}
-
-		
-		/// <summary>
-		/// Return this hex as an OffsetHexCoord.
-		/// </summary>
-		/// <returns>An OffsetHexCoord representing the hex.</returns>
-		public 
-		OffsetHexCoord 
-		ToOffset()
-		{
-			return this.ToCubic().ToOffset();
 		}
 
 		#endregion

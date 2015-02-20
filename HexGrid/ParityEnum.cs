@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ca.axoninteractive.Geometry.HexGrid
+namespace ca.axoninteractive.Geometry.Hex
 {
 	/// <summary>
 	/// Represents the row-parity of an OffsetHexCoord (although it can represent the parity of 

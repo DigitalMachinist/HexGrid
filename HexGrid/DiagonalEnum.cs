@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ca.axoninteractive.Geometry.HexGrid
+namespace ca.axoninteractive.Geometry.Hex
 {
 	/// <summary>
 	/// Represents a diagonal hex (see http://www.redblobgames.com/grids/hexagons/), relative to
