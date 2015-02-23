@@ -91,8 +91,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		public OffsetHexCoord ToOffset()
 		{
 			// Made a scary change here. Expect this to break!
-			int q = this.z + ( this.x - ( this.x & 1 ) ) / 2;
-			int r = this.x;
+			int q = this.x + ( this.z - ( this.z & 1 ) ) / 2;
+			int r = this.z;
 
 			return new OffsetHexCoord( q, r );
 		}
@@ -126,9 +126,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// <returns>A new CubicHexCoord representing the difference of the inputs.</returns>
 		public static CubicHexCoord operator -( CubicHexCoord lhs, CubicHexCoord rhs ) 
 		{
-			int x = lhs.x + rhs.x;
-			int y = lhs.y + rhs.y;
-			int z = lhs.z + rhs.z;
+			int x = lhs.x - rhs.x;
+			int y = lhs.y - rhs.y;
+			int z = lhs.z - rhs.z;
 
 			return new CubicHexCoord( x, y, z );
 		}
@@ -214,7 +214,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// CubicHexCoords will be returned for.</param>
 		/// <returns>An array of CubicHexCoords within the given range from this hex (including 
 		/// this hex) in no particular order.</returns>
-		public CubicHexCoord[] AreaAround( int range )
+		public 
+		CubicHexCoord[] 
+		AreaAround( int range )
 		{
 			return CubicHexCoord.Area( this, range );
 		}
@@ -227,7 +229,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// <param name="direction">The diagonal direction of the requested neighbor.</param>
 		/// <returns>A CubicHexCoord representing the diagonal of this hex in the given diagonal 
 		/// direction.</returns>
-		public CubicHexCoord Diagonal( DiagonalEnum direction )
+		public 
+		CubicHexCoord 
+		Diagonal( DiagonalEnum direction )
 		{
 			return this + DIAGONALS[ (int)direction ];
 		}
@@ -239,7 +243,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// </summary>
 		/// <returns>An array of CubicHexCoords representing this hex's diagonals (in clockwise
 		/// order).</returns>
-		public CubicHexCoord[] Diagonals()
+		public 
+		CubicHexCoord[] 
+		Diagonals()
 		{
 			return new CubicHexCoord[ 6 ] {
 				this + DIAGONALS[ (int)DiagonalEnum.ESE ], 
@@ -257,7 +263,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// </summary>
 		/// <param name="other">Any CubicHexCoord.</param>
 		/// <returns>An integer number of grid steps from this hex to the given hex.</returns>
-		public int DistanceTo( CubicHexCoord other )
+		public 
+		int 
+		DistanceTo( CubicHexCoord other )
 		{
 			return CubicHexCoord.Distance( this, other );
 		}
@@ -271,7 +279,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// </summary>
 		/// <param name="other">The CubicHexCoord representing the last hex in the line.</param>
 		/// <returns>An array of CubicHexCoords ordered as a line from start to end.</returns>
-		public CubicHexCoord[] LineTo( CubicHexCoord other )
+		public 
+		CubicHexCoord[] 
+		LineTo( CubicHexCoord other )
 		{
 			return CubicHexCoord.Line( this, other );
 		}
@@ -283,7 +293,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// <param name="direction">The direction of the requested neighbor.</param>
 		/// <returns>A CubicHexCoord representing the neighbor of this hex in the given direction.
 		/// </returns>
-		public CubicHexCoord Neighbor( DirectionEnum direction )
+		public 
+		CubicHexCoord 
+		Neighbor( DirectionEnum direction )
 		{
 			return this + DIRECTIONS[ (int)direction ];
 		}
@@ -295,7 +307,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// </summary>
 		/// <returns>An array of CubicHexCoords representing this hex's neighbors (in clockwise
 		/// order).</returns>
-		public CubicHexCoord[] Neighbors()
+		public 
+		CubicHexCoord[] 
+		Neighbors()
 		{
 			return new CubicHexCoord[ 6 ] {
 				this + DIRECTIONS[ (int)DirectionEnum.E  ], 
@@ -318,7 +332,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// <param name="startDirection">The direction in which the first CubicHexCoord of the 
 		/// ring will appear in.</param>
 		/// <returns>An array of CubicHexCoords ordered as a ring.</returns>
-		public CubicHexCoord[] RingAround( int range, DirectionEnum startDirection = DirectionEnum.E )
+		public 
+		CubicHexCoord[] 
+		RingAround( int range, DirectionEnum startDirection = DirectionEnum.E )
 		{
 			return CubicHexCoord.Ring( this, range, startDirection );
 		}
@@ -335,7 +351,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// 60 degree rotation steps.</param>
 		/// <returns>A CubicHexCoord representing the position of the rotated hex on the grid.
 		/// </returns>
-		public CubicHexCoord RotateAroundOther( CubicHexCoord center, RotationEnum rotation )
+		public 
+		CubicHexCoord 
+		RotateAroundOther( CubicHexCoord center, RotationEnum rotation )
 		{
 			return CubicHexCoord.Rotate( center, this, rotation );
 		}
@@ -352,7 +370,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// 60 degree rotation steps.</param>
 		/// <returns>A CubicHexCoord representing the position of the rotated hex on the grid.
 		/// </returns>
-		public CubicHexCoord RotateOtherAround( CubicHexCoord toRotate, RotationEnum rotation )
+		public 
+		CubicHexCoord 
+		RotateOtherAround( CubicHexCoord toRotate, RotationEnum rotation )
 		{
 			return CubicHexCoord.Rotate( this, toRotate, rotation );
 		}
@@ -364,13 +384,11 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// </summary>
 		/// <param name="factor">A multiplicative factor to scale by.</param>
 		/// <returns>A new scaled CubicHexCoord.</returns>
-		public CubicHexCoord Scale( int factor )
+		public 
+		CubicHexCoord 
+		Scale( float factor )
 		{
-			return new CubicHexCoord(
-				this.x * factor,
-				this.y * factor,
-				this.z * factor
-			);
+			return new FloatCubic( this ).Scale( factor ).Round();
 		}
 
 		
@@ -386,7 +404,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// spiral will appear in.</param>
 		/// <returns>An array of CubicHexCoords ordered as a spiral, beginning from the center
 		/// and proceeding clockwise until it reaches the outside of the spiral.</returns>
-		public CubicHexCoord[] SpiralAroundInward( int range, DirectionEnum startDirection = DirectionEnum.E )
+		public 
+		CubicHexCoord[] 
+		SpiralAroundInward( int range, DirectionEnum startDirection = DirectionEnum.E )
 		{
 			return CubicHexCoord.SpiralInward( this, range, startDirection );
 		}
@@ -405,7 +425,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// <returns>An array of CubicHexCoords ordered as a spiral, beginning from the outside
 		/// and proceeding clockwise until it reaches the center of the spiral.</returns>
 		/// <returns></returns>
-		public CubicHexCoord[] SpiralAroundOutward( int range, DirectionEnum startDirection = DirectionEnum.E )
+		public 
+		CubicHexCoord[] 
+		SpiralAroundOutward( int range, DirectionEnum startDirection = DirectionEnum.E )
 		{
 			return CubicHexCoord.SpiralOutward( this, range, startDirection );
 		}
@@ -424,7 +446,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// CubicHexCoords will be returned for.</param>
 		/// <returns>An array of CubicHexCoords within the given range from the given center 
 		/// (including the center itself) in no particular order.</returns>
-		public static CubicHexCoord[] Area( CubicHexCoord center, int range )
+		public static 
+		CubicHexCoord[] 
+		Area( CubicHexCoord center, int range )
 		{
 			if ( range < 0 )
 			{
@@ -435,17 +459,24 @@ namespace ca.axoninteractive.Geometry.Hex
 				return new CubicHexCoord[ 1 ] { center };
 			}
 
-			CubicHexCoord[] result = new CubicHexCoord[ 2 * range + 1 ];
+			int arraySize = 1;
+			for ( int i = range; i > 0; i-- )
+			{
+				arraySize += 6 * i;
+			}
+
+
+			CubicHexCoord[] result = new CubicHexCoord[ arraySize ];
 
 			for ( int i = 0, dx = -range; dx <= range; dx++ )
 			{
 				int dyMinBound = Math.Max( -range, -dx - range );
-				int dyMaxBound = Math.Max(  range, -dx + range );
+				int dyMaxBound = Math.Min(  range, -dx + range );
 
-				for ( int dy = dyMinBound; dy <= dyMaxBound; i++, dy++ )
+				for ( int dy = dyMinBound; dy <= dyMaxBound; dy++ )
 				{
 					int dz = -dx - dy;
-					result[ i ] = center + new CubicHexCoord( dx, dy, dz );
+					result[ i++ ] = center + new CubicHexCoord( dx, dy, dz );
 				}
 			}
 
@@ -460,7 +491,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// <param name="direction">The diagonal direction to return a diff for.</param>
 		/// <returns>A CubicHexCoord representing the diff between some hex and its diagonal in 
 		/// the given diagonal direction.</returns>
-		public static CubicHexCoord DiagonalDiff( DiagonalEnum direction )
+		public static 
+		CubicHexCoord 
+		DiagonalDiff( DiagonalEnum direction )
 		{
 			return DIAGONALS[ (int)direction ];
 		}
@@ -473,7 +506,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// <param name="direction">The direction to return a diff for.</param>
 		/// <returns>A CubicHexCoord representing the diff between some hex and its neighbor in 
 		/// the given direction.</returns>
-		public static CubicHexCoord DirectionDiff( DirectionEnum direction )
+		public static 
+		CubicHexCoord 
+		DirectionDiff( DirectionEnum direction )
 		{
 			return DIRECTIONS[ (int)direction ];
 		}
@@ -490,7 +525,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// </param>
 		/// <returns>An array of CubicHexCoords that represents the hexes belonging to both a 
 		/// and b.</returns>
-		public static CubicHexCoord[] IntersectRanges( CubicHexCoord[] a, CubicHexCoord[] b )
+		public static 
+		CubicHexCoord[] 
+		IntersectRanges( CubicHexCoord[] a, CubicHexCoord[] b )
 		{
 			throw new NotImplementedException( "Feature not suppored yet!" );
 		}
@@ -502,7 +539,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// <param name="a">Any CubicHexCoord.</param>
 		/// <param name="b">Any CubicHexCoord.</param>
 		/// <returns>An integer number of grid steps from a to b.</returns>
-		public static int Distance( CubicHexCoord a, CubicHexCoord b )
+		public static 
+		int 
+		Distance( CubicHexCoord a, CubicHexCoord b )
 		{
 			int dx = Math.Abs( a.x - b.x );
 			int dy = Math.Abs( a.y - b.y );
@@ -521,11 +560,13 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// <param name="start">The CubicHexCoord representing the first hex in the line.</param>
 		/// <param name="end">The CubicHexCoord representing the last hex in the line.</param>
 		/// <returns>An array of CubicHexCoords ordered as a line from start to end.</returns>
-		public static CubicHexCoord[] Line( CubicHexCoord start, CubicHexCoord end )
+		public static 
+		CubicHexCoord[] 
+		Line( CubicHexCoord start, CubicHexCoord end )
 		{
 			int distance = CubicHexCoord.Distance( start, end );
 
-			CubicHexCoord[] result = new CubicHexCoord[ distance ];
+			CubicHexCoord[] result = new CubicHexCoord[ distance + 1 ];
 
 			for ( int i = 0; i <= distance; i++ )
 			{
@@ -533,7 +574,7 @@ namespace ca.axoninteractive.Geometry.Hex
 				float yLerp = start.y + ( end.y - start.y ) * 1f / distance * i;
 				float zLerp = start.z + ( end.z - start.z ) * 1f / distance * i;
 
-				result[ i ] = CubicHexCoord.Round( new FloatCubic( xLerp, yLerp, zLerp ) );
+				result[ i ] = new FloatCubic( xLerp, yLerp, zLerp ).Round();
 			}
 
 			return result;
@@ -551,7 +592,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// <param name="startDirection">The direction in which the first CubicHexCoord of the 
 		/// ring will appear in.</param>
 		/// <returns>An array of CubicHexCoords ordered as a ring.</returns>
-		public static CubicHexCoord[] Ring( CubicHexCoord center, int range, DirectionEnum startDirection = DirectionEnum.E )
+		public static 
+		CubicHexCoord[] 
+		Ring( CubicHexCoord center, int range, DirectionEnum startDirection = DirectionEnum.E )
 		{
 			if ( range <= 0 )
 			{
@@ -562,12 +605,20 @@ namespace ca.axoninteractive.Geometry.Hex
 
 			CubicHexCoord cube = center + DIRECTIONS[ (int)startDirection ].Scale( range );
 
+			int[] directions = new int[ 6 ];
 			for ( int i = 0; i < 6; i++ )
 			{
+				directions[ i ] = ( (int)startDirection + i ) % 6;
+			}
+
+			int index = 0;
+			for ( int i = 0; i < 6; i++ )
+			{
+				int neighborDirection = ( directions[ i ] + 2 ) % 6;
 				for ( int j = 0; j < range; j++ )
 				{
-					result[ 6 * i + j ] = cube;
-					cube = cube.Neighbor( (DirectionEnum)i );
+					result[ index++ ] = cube;
+					cube = cube.Neighbor( (DirectionEnum)neighborDirection );
 				}
 			}
 
@@ -588,42 +639,11 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// 60 degree rotation steps.</param>
 		/// <returns>A CubicHexCoord representing the position of the rotated hex on the grid.
 		/// </returns>
-		public static CubicHexCoord Rotate( CubicHexCoord center, CubicHexCoord toRotate, RotationEnum rotation )
+		public static 
+		CubicHexCoord 
+		Rotate( CubicHexCoord center, CubicHexCoord toRotate, RotationEnum rotation )
 		{
 			throw new NotImplementedException( "Feature not suppored yet!" );
-		}
-
-		
-		/// <summary>
-		/// Return a CubicHexCoord representing the nearest hex to the given a FloatCubic.
-		/// </summary>
-		/// <param name="cubic">A FloatCubic to be rounded.</param>
-		/// <returns>A new CubicHexCoord representing the nearest Hex to the given FloatCubic.
-		/// </returns>
-		public static CubicHexCoord Round( FloatCubic cubic )
-		{
-			int rx = (int)Math.Round( cubic.x );
-			int ry = (int)Math.Round( cubic.y );
-			int rz = (int)Math.Round( cubic.z );
-
-			int xDiff = (int)Math.Abs( rx - cubic.x );
-			int yDiff = (int)Math.Abs( ry - cubic.y );
-			int zDiff = (int)Math.Abs( rz - cubic.z );
-
-			if ( xDiff > yDiff && xDiff > zDiff )
-			{
-				rx = -ry - rz;
-			}
-			else if ( yDiff > zDiff )
-			{
-				ry = -rx - rz;
-			}
-			else
-			{
-				rz = -rx - ry;
-			}
-
-			return new CubicHexCoord( rx, ry, rz );
 		}
 
 		
@@ -640,7 +660,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// spiral will appear in.</param>
 		/// <returns>An array of CubicHexCoords ordered as a spiral, beginning from the center
 		/// and proceeding clockwise until it reaches the outside of the spiral.</returns>
-		public static CubicHexCoord[] SpiralInward( CubicHexCoord center, int range, DirectionEnum startDirection = DirectionEnum.E )
+		public static 
+		CubicHexCoord[] 
+		SpiralInward( CubicHexCoord center, int range, DirectionEnum startDirection = DirectionEnum.E )
 		{
 			if ( range <= 0 )
 			{
@@ -652,7 +674,7 @@ namespace ca.axoninteractive.Geometry.Hex
 			}
 
 			int arraySize = 1;
-			for ( int i = range; i > 0; i++ )
+			for ( int i = range; i > 0; i-- )
 			{
 				arraySize += 6 * i;
 			}
@@ -685,7 +707,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		/// spiral will appear in.</param>
 		/// <returns>An array of CubicHexCoords ordered as a spiral, beginning from the outside
 		/// and proceeding clockwise until it reaches the center of the spiral.</returns>
-		public static CubicHexCoord[] SpiralOutward( CubicHexCoord center, int range, DirectionEnum startDirection = DirectionEnum.E )
+		public static 
+		CubicHexCoord[] 
+		SpiralOutward( CubicHexCoord center, int range, DirectionEnum startDirection = DirectionEnum.E )
 		{
 			if ( range <= 0 )
 			{
@@ -697,7 +721,7 @@ namespace ca.axoninteractive.Geometry.Hex
 			}
 
 			int arraySize = 1;
-			for ( int i = range; i > 0; i++ )
+			for ( int i = range; i > 0; i-- )
 			{
 				arraySize += 6 * i;
 			}

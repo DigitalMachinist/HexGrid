@@ -100,7 +100,7 @@ namespace ca.axoninteractive.Geometry.Hex
 			float q = ( point.z * TWO_THIRDS ) / HexRadius;
 			float r = ( point.x * ( SQRT_3 - point.z ) / 3f ) / HexRadius;
 
-			return CubicHexCoord.Round( new FloatAxial( q, r ).ToFloatCubic() );
+			return new FloatAxial( q, r ).ToFloatCubic().Round();
 		}
 
 		#endregion

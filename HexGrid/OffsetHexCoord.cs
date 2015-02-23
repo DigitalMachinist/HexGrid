@@ -6,7 +6,7 @@ namespace ca.axoninteractive.Geometry.Hex
 	/// <summary>
 	/// Represents the position of a hex within a hex grid using the Odd-Row offset grid layout
 	/// scheme. This means that all hexes are pointy-topped and each odd row is offset in the 
-	/// positive q direction by half of a hex width. Offset coordinates are a natural fit for 
+	/// positive r direction by half of a hex width. Offset coordinates are a natural fit for 
 	/// storage in a rectangular array of memory, and can be an ideal storage format for hexes.
 	/// </summary>
 	/// <remarks>This type is the least computationally efficient type to use for hex grid 
@@ -21,31 +21,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		public int r;
 
 		#endregion
-		#region Constants
-
-		// [ PARITY, DIRECTION ]
-		private static readonly OffsetHexCoord[,] DIRECTIONS = {
-			{
-				// Even-parity rows
-				new OffsetHexCoord(  0,  1 ),
-				new OffsetHexCoord(  1,  0 ),
-				new OffsetHexCoord(  1, -1 ),
-				new OffsetHexCoord(  0, -1 ),
-				new OffsetHexCoord( -1, -1 ),
-				new OffsetHexCoord( -1,  0 )
-			},
-			{
-				// Odd-parity rows
-				new OffsetHexCoord(  0,  1 ),
-				new OffsetHexCoord(  1,  1 ),
-				new OffsetHexCoord(  1,  0 ),
-				new OffsetHexCoord(  0, -1 ),
-				new OffsetHexCoord( -1,  0 ),
-				new OffsetHexCoord( -1,  1 )
-			}
-		};
-
-		#endregion
+		
+		
 		#region Properties
 		
 		/// <summary>
@@ -60,6 +37,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		public ParityEnum RowParity { get { return (ParityEnum)( this.r & 1 ); } }
 
 		#endregion
+		
+		
 		#region Constructors
 		
 		/// <summary>
@@ -75,6 +54,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+		
+		
 		#region Type Conversions
 		
 		/// <summary>
@@ -86,14 +67,16 @@ namespace ca.axoninteractive.Geometry.Hex
 		ToCubic()
 		{
 			// Made a scary change here. Expect this to break!
-			int x = this.r - ( this.q - ( this.q & 1 ) ) / 2;
-			int z = this.q;
+			int x = this.q - ( this.r - (int)RowParity ) / 2;
+			int z = this.r;
 			int y = -x - z;
 
 			return new CubicHexCoord( x, y, z );
 		}
 
 		#endregion
+		
+		
 		#region Operator Overloads
 		
 		/// <summary>

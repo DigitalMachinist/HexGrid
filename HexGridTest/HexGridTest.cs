@@ -49,40 +49,25 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void OffsetToPoint()
 		{
-			//float x = HexRadius * 1.5f * hex.r;
-			//float z = HexRadius * SQRT_3 * ( hex.q + 0.5f * (float)hex.RowParity );
-
-			//return new Vec2D( x, z );
-
-
-			// TODO
-
-
 			HexGrid grid = new HexGrid( 2f );
 			Vec2D point = grid.OffsetToPoint( new OffsetHexCoord( 1, 2 ) );
+
+			float xExpected = 2 * 2f * 1.5f;
+			float zExpected = 1 * 2f * (float)Math.Sqrt( 3 );
 			
-			Assert.That( point.x, Is.InRange<float>( 6.000000f - EPSILON, 6.000000f + EPSILON ) );
-			Assert.That( point.z, Is.InRange<float>( 6.928203f - EPSILON, 6.928203f + EPSILON ) );
+			Assert.That( point.x, Is.InRange<float>( xExpected - EPSILON, xExpected + EPSILON ) );
+			Assert.That( point.z, Is.InRange<float>( zExpected - EPSILON, zExpected + EPSILON ) );
 		}
 
 		[Test]
 		public void PointToCubic()
 		{
-			//float q = ( point.z * TWO_THIRDS ) / HexRadius;
-			//float r = ( point.x * ( SQRT_3 - point.z ) / 3f ) / HexRadius;
-
-			//return CubicHexCoord.Round( new FloatAxial( q, r ).ToFloatCubic() );
-
-
-			// TODO
-
-
 			HexGrid grid = new HexGrid( 2f );
-			CubicHexCoord cubic = grid.PointToCubic( new Vec2D( 10f, 10f ) );
+			CubicHexCoord cubic = grid.PointToCubic( new Vec2D( 2.5f, 5.5f ) );
 			
-			Assert.That( cubic.x, Is.InRange<float>( 6.000000f - EPSILON, 6.000000f + EPSILON ) );
-			Assert.That( cubic.y, Is.InRange<float>( 6.928203f - EPSILON, 6.928203f + EPSILON ) );
-			Assert.That( cubic.z, Is.InRange<float>( 6.928203f - EPSILON, 6.928203f + EPSILON ) );
+			Assert.That( cubic.x, Is.EqualTo(  2 ) );
+			Assert.That( cubic.y, Is.EqualTo(  0 ) );
+			Assert.That( cubic.z, Is.EqualTo( -2 ) );
 		}
 
 		#endregion

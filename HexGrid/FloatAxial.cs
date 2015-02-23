@@ -19,6 +19,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		public float r;
 
 		#endregion
+		
+		
 		#region Constructors
 		
 		/// <summary>
@@ -46,6 +48,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+		
+		
 		#region Type Conversions
 		
 		/// <summary>

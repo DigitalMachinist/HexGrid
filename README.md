@@ -15,7 +15,7 @@ Doxygen HTML docs are provided and are relatively complete.
 
 ## Tests
 
-A NUnit test project is included --with full unit test coverage, excluding a couple of low-level functions that are private in release build anyway-- that will have full text coverage soon, but is currently just a stub for tests to be created.
+A NUnit test project is included with reasonably complete unit test coverage. It isn't 100% complete, but each function is run and compared against an expected result to test for correctness at least.
 
 If I missed anything, please let me know or submit a PR.
 

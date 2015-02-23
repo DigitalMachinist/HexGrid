@@ -60,13 +60,24 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		#region Instance Methods
 
 		[Test]
+		public void Round()
+		{
+			FloatCubic floatCubic = new FloatAxial( 1.2f, 2.2f ).ToFloatCubic();
+			CubicHexCoord rounded = floatCubic.Round();
+			AxialHexCoord axial = rounded.ToAxial();
+
+			Assert.That( axial.q, Is.EqualTo( 1 ) );
+			Assert.That( axial.r, Is.EqualTo( 2 ) );
+		}
+
+		[Test]
 		public void Scale()
 		{
-			FloatCubic floatCubic = new FloatCubic( 1f, 2f, 3f ).Scale( 3f );
+			FloatCubic floatCubic = new FloatCubic( 1f, 2f, -3f ).Scale( 3f );
 			
-			Assert.That( floatCubic.x, Is.InRange<float>( 3f - EPSILON, 3f + EPSILON ) );
-			Assert.That( floatCubic.y, Is.InRange<float>( 6f - EPSILON, 6f + EPSILON ) );
-			Assert.That( floatCubic.z, Is.InRange<float>( 9f - EPSILON, 9f + EPSILON ) );
+			Assert.That( floatCubic.x, Is.InRange<float>(  3f - EPSILON,  3f + EPSILON ) );
+			Assert.That( floatCubic.y, Is.InRange<float>(  6f - EPSILON,  6f + EPSILON ) );
+			Assert.That( floatCubic.z, Is.InRange<float>( -9f - EPSILON, -9f + EPSILON ) );
 		}
 
 		#endregion

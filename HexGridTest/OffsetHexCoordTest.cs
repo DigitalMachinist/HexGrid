@@ -12,8 +12,8 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void PropertyIsOddRow()
 		{
-			bool isTrue  = new OffsetHexCoord( 1, 2 ).IsOddRow;
-			bool isFalse = new OffsetHexCoord( 2, 2 ).IsOddRow;
+			bool isTrue  = new OffsetHexCoord( 2, 3 ).IsOddRow;
+			bool isFalse = new OffsetHexCoord( 1, 2 ).IsOddRow;
 			
 			Assert.That( isTrue,  Is.True  );
 			Assert.That( isFalse, Is.False );
@@ -22,10 +22,10 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void PropertyRowParity()
 		{
-			ParityEnum odd  = new OffsetHexCoord( 1, 2 ).RowParity;
-			ParityEnum even = new OffsetHexCoord( 2, 2 ).RowParity;
+			ParityEnum odd  = new OffsetHexCoord( 2, 3 ).RowParity;
+			ParityEnum even = new OffsetHexCoord( 1, 2 ).RowParity;
 			
-			Assert.That( odd,  Is.EqualTo( ParityEnum.Odd )  );
+			Assert.That( odd,  Is.EqualTo( ParityEnum.Odd  ) );
 			Assert.That( even, Is.EqualTo( ParityEnum.Even ) );
 		}
 
@@ -59,18 +59,18 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		public void ToCubic()
 		{
 			// Odd row
-			CubicHexCoord cubic = new AxialHexCoord( 1, 2 ).ToCubic();
+			CubicHexCoord cubic = new OffsetHexCoord( 1, 2 ).ToCubic();
 
-			Assert.That( cubic.x, Is.EqualTo(  2 ) );
-			Assert.That( cubic.y, Is.EqualTo( -3 ) );
-			Assert.That( cubic.z, Is.EqualTo(  1 ) );
+			Assert.That( cubic.x, Is.EqualTo(  0 ) );
+			Assert.That( cubic.y, Is.EqualTo( -2 ) );
+			Assert.That( cubic.z, Is.EqualTo(  2 ) );
 
 			// Even row
-			cubic = new AxialHexCoord( 2, 3 ).ToCubic();
+			cubic = new OffsetHexCoord( 2, 3 ).ToCubic();
 
-			Assert.That( cubic.x, Is.EqualTo(  2 ) );
+			Assert.That( cubic.x, Is.EqualTo(  1 ) );
 			Assert.That( cubic.y, Is.EqualTo( -4 ) );
-			Assert.That( cubic.z, Is.EqualTo(  2 ) );
+			Assert.That( cubic.z, Is.EqualTo(  3 ) );
 		}
 
 		#endregion

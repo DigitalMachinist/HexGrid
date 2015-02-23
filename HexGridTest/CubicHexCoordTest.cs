@@ -46,10 +46,10 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void ToOffset()
 		{
-			OffsetHexCoord offset = new CubicHexCoord( 1, 2, 3 ).ToOffset();
+			OffsetHexCoord offset = new CubicHexCoord( 0, -2, 2 ).ToOffset();
 
-			Assert.That( offset.q, Is.EqualTo( 3 ) );
 			Assert.That( offset.q, Is.EqualTo( 1 ) );
+			Assert.That( offset.r, Is.EqualTo( 2 ) );
 		}
 
 		#endregion
@@ -105,8 +105,31 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void AreaAround()
 		{
-			// TODO
-			Assert.Inconclusive();
+			CubicHexCoord cubic = new CubicHexCoord( 1, 0, -1 );
+			CubicHexCoord[] area = CubicHexCoord.Area( cubic, 2 );
+
+			// Center
+			Assert.Contains( new CubicHexCoord(  1,  0, -1 ), area );
+			// Distance 1
+			Assert.Contains( new CubicHexCoord(  0,  1, -1 ), area );
+			Assert.Contains( new CubicHexCoord(  1,  1, -2 ), area );
+			Assert.Contains( new CubicHexCoord(  2,  0, -2 ), area );
+			Assert.Contains( new CubicHexCoord(  2, -1, -1 ), area );
+			Assert.Contains( new CubicHexCoord(  1, -1,  0 ), area );
+			Assert.Contains( new CubicHexCoord(  0,  0,  0 ), area );
+			// Distance 2
+			Assert.Contains( new CubicHexCoord( -1,  2, -1 ), area );
+			Assert.Contains( new CubicHexCoord(  0,  2, -2 ), area );
+			Assert.Contains( new CubicHexCoord(  1,  2, -3 ), area );
+			Assert.Contains( new CubicHexCoord(  2,  1, -3 ), area );
+			Assert.Contains( new CubicHexCoord(  3,  0, -3 ), area );
+			Assert.Contains( new CubicHexCoord(  3, -1, -2 ), area );
+			Assert.Contains( new CubicHexCoord(  3, -2, -1 ), area );
+			Assert.Contains( new CubicHexCoord(  2, -2,  0 ), area );
+			Assert.Contains( new CubicHexCoord(  1, -2,  1 ), area );
+			Assert.Contains( new CubicHexCoord(  0, -1,  1 ), area );
+			Assert.Contains( new CubicHexCoord( -1,  0,  1 ), area );
+			Assert.Contains( new CubicHexCoord( -1,  1,  0 ), area );
 		}
 
 		[Test]
@@ -148,8 +171,16 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void LineTo()
 		{
-			// TODO
-			Assert.Inconclusive();
+			CubicHexCoord startCubic = new CubicHexCoord( 1, 0, -1 );
+			CubicHexCoord endCubic = new CubicHexCoord( -2, 2, 0 );
+			CubicHexCoord[] line = startCubic.LineTo( endCubic );
+
+			Assert.That( line, Is.EquivalentTo( new CubicHexCoord[ 4 ] {
+				new CubicHexCoord(  1,  0, -1 ),
+				new CubicHexCoord(  0,  1, -1 ),
+				new CubicHexCoord( -1,  1,  0 ),
+				new CubicHexCoord( -2,  2,  0 )
+			} ) );
 		}
 		
 		[Test]
@@ -181,8 +212,23 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void RingAround()
 		{
-			// TODO
-			Assert.Inconclusive();
+			CubicHexCoord cubic = new CubicHexCoord( 1, 0, -1 );
+			CubicHexCoord[] ring = cubic.RingAround( 2, DirectionEnum.W );
+
+			Assert.That( ring, Is.EquivalentTo( new CubicHexCoord[ 12 ] {
+				new CubicHexCoord( -1,  2, -1 ),
+				new CubicHexCoord(  0,  2, -2 ),
+				new CubicHexCoord(  1,  2, -3 ),
+				new CubicHexCoord(  2,  1, -3 ),
+				new CubicHexCoord(  3,  0, -3 ),
+				new CubicHexCoord(  3, -1, -2 ),
+				new CubicHexCoord(  3, -2, -1 ),
+				new CubicHexCoord(  2, -2,  0 ),
+				new CubicHexCoord(  1, -2,  1 ),
+				new CubicHexCoord(  0, -1,  1 ),
+				new CubicHexCoord( -1,  0,  1 ),
+				new CubicHexCoord( -1,  1,  0 )
+			} ) );
 		}
 		
 		[Test]
@@ -213,15 +259,65 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void SpiralAroundInward()
 		{
-			// TODO
-			Assert.Inconclusive();
+			CubicHexCoord cubic = new CubicHexCoord( 1, 0, -1 );
+			CubicHexCoord[] spiral = cubic.SpiralAroundOutward( 2, DirectionEnum.W );
+
+			Assert.That( spiral, Is.EquivalentTo( new CubicHexCoord[ 19 ] {
+				// Distance 2
+				new CubicHexCoord( -1,  2, -1 ),
+				new CubicHexCoord(  0,  2, -2 ),
+				new CubicHexCoord(  1,  2, -3 ),
+				new CubicHexCoord(  2,  1, -3 ),
+				new CubicHexCoord(  3,  0, -3 ),
+				new CubicHexCoord(  3, -1, -2 ),
+				new CubicHexCoord(  3, -2, -1 ),
+				new CubicHexCoord(  2, -2,  0 ),
+				new CubicHexCoord(  1, -2,  1 ),
+				new CubicHexCoord(  0, -1,  1 ),
+				new CubicHexCoord( -1,  0,  1 ),
+				new CubicHexCoord( -1,  1,  0 ),
+				// Distance 1
+				new CubicHexCoord(  0,  1, -1 ),
+				new CubicHexCoord(  1,  1, -2 ),
+				new CubicHexCoord(  2,  0, -2 ),
+				new CubicHexCoord(  2, -1, -1 ),
+				new CubicHexCoord(  1, -1,  0 ),
+				new CubicHexCoord(  0,  0,  0 ),
+				// Center
+				new CubicHexCoord(  1,  0, -1 )
+			} ) );
 		}
 		
 		[Test]
 		public void SpiralAroundOutward()
 		{
-			// TODO
-			Assert.Inconclusive();
+			CubicHexCoord cubic = new CubicHexCoord( 1, 0, -1 );
+			CubicHexCoord[] spiral = cubic.SpiralAroundOutward( 2, DirectionEnum.W );
+
+			Assert.That( spiral, Is.EquivalentTo( new CubicHexCoord[ 19 ] {
+				// Center
+				new CubicHexCoord(  1,  0, -1 ),
+				// Distance 1
+				new CubicHexCoord(  0,  1, -1 ),
+				new CubicHexCoord(  1,  1, -2 ),
+				new CubicHexCoord(  2,  0, -2 ),
+				new CubicHexCoord(  2, -1, -1 ),
+				new CubicHexCoord(  1, -1,  0 ),
+				new CubicHexCoord(  0,  0,  0 ),
+				// Distance 2
+				new CubicHexCoord( -1,  2, -1 ), 
+				new CubicHexCoord(  0,  2, -2 ),
+				new CubicHexCoord(  1,  2, -3 ),
+				new CubicHexCoord(  2,  1, -3 ),
+				new CubicHexCoord(  3,  0, -3 ),
+				new CubicHexCoord(  3, -1, -2 ),
+				new CubicHexCoord(  3, -2, -1 ),
+				new CubicHexCoord(  2, -2,  0 ),
+				new CubicHexCoord(  1, -2,  1 ),
+				new CubicHexCoord(  0, -1,  1 ),
+				new CubicHexCoord( -1,  0,  1 ),
+				new CubicHexCoord( -1,  1,  0 )
+			} ) );
 		}
 
 		#endregion
@@ -232,8 +328,31 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void StaticArea()
 		{
-			// TODO
-			Assert.Inconclusive();
+			CubicHexCoord cubic = new CubicHexCoord( 1, 0, -1 );
+			CubicHexCoord[] area = CubicHexCoord.Area( cubic, 2 );
+
+			// Center
+			Assert.Contains( new CubicHexCoord(  1,  0, -1 ), area );
+			// Distance 1
+			Assert.Contains( new CubicHexCoord(  0,  1, -1 ), area );
+			Assert.Contains( new CubicHexCoord(  1,  1, -2 ), area );
+			Assert.Contains( new CubicHexCoord(  2,  0, -2 ), area );
+			Assert.Contains( new CubicHexCoord(  2, -1, -1 ), area );
+			Assert.Contains( new CubicHexCoord(  1, -1,  0 ), area );
+			Assert.Contains( new CubicHexCoord(  0,  0,  0 ), area );
+			// Distance 2
+			Assert.Contains( new CubicHexCoord( -1,  2, -1 ), area );
+			Assert.Contains( new CubicHexCoord(  0,  2, -2 ), area );
+			Assert.Contains( new CubicHexCoord(  1,  2, -3 ), area );
+			Assert.Contains( new CubicHexCoord(  2,  1, -3 ), area );
+			Assert.Contains( new CubicHexCoord(  3,  0, -3 ), area );
+			Assert.Contains( new CubicHexCoord(  3, -1, -2 ), area );
+			Assert.Contains( new CubicHexCoord(  3, -2, -1 ), area );
+			Assert.Contains( new CubicHexCoord(  2, -2,  0 ), area );
+			Assert.Contains( new CubicHexCoord(  1, -2,  1 ), area );
+			Assert.Contains( new CubicHexCoord(  0, -1,  1 ), area );
+			Assert.Contains( new CubicHexCoord( -1,  0,  1 ), area );
+			Assert.Contains( new CubicHexCoord( -1,  1,  0 ), area );
 		}
 
 		[Test]
@@ -266,15 +385,38 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		[Test]
 		public void StaticLine()
 		{
-			// TODO
-			Assert.Inconclusive();
+			CubicHexCoord startCubic = new CubicHexCoord( 1, 0, -1 );
+			CubicHexCoord endCubic = new CubicHexCoord( -2, 2, 0 );
+			CubicHexCoord[] line = CubicHexCoord.Line( startCubic, endCubic );
+
+			Assert.That( line, Is.EquivalentTo( new CubicHexCoord[ 4 ] {
+				new CubicHexCoord(  1,  0, -1 ),
+				new CubicHexCoord(  0,  1, -1 ),
+				new CubicHexCoord( -1,  1,  0 ),
+				new CubicHexCoord( -2,  2,  0 )
+			} ) );
 		}
 
 		[Test]
 		public void StaticRing()
 		{
-			// TODO
-			Assert.Inconclusive();
+			CubicHexCoord cubic = new CubicHexCoord( 1, 0, -1 );
+			CubicHexCoord[] ring = CubicHexCoord.Ring( cubic, 2, DirectionEnum.W );
+
+			Assert.That( ring, Is.EquivalentTo( new CubicHexCoord[ 12 ] {
+				new CubicHexCoord( -1,  2, -1 ),
+				new CubicHexCoord(  0,  2, -2 ),
+				new CubicHexCoord(  1,  2, -3 ),
+				new CubicHexCoord(  2,  1, -3 ),
+				new CubicHexCoord(  3,  0, -3 ),
+				new CubicHexCoord(  3, -1, -2 ),
+				new CubicHexCoord(  3, -2, -1 ),
+				new CubicHexCoord(  2, -2,  0 ),
+				new CubicHexCoord(  1, -2,  1 ),
+				new CubicHexCoord(  0, -1,  1 ),
+				new CubicHexCoord( -1,  0,  1 ),
+				new CubicHexCoord( -1,  1,  0 )
+			} ) );
 		}
 
 		[Test]
@@ -285,28 +427,67 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		}
 
 		[Test]
-		public void StaticRound()
-		{
-			FloatCubic floatCubic = new FloatAxial( 1.2f, 2.2f ).ToFloatCubic();
-			CubicHexCoord rounded = CubicHexCoord.Round( floatCubic );
-			AxialHexCoord axial = rounded.ToAxial();
-
-			Assert.That( axial.q, Is.EqualTo( 1 ) );
-			Assert.That( axial.r, Is.EqualTo( 2 ) );
-		}
-
-		[Test]
 		public void StaticSpiralInward()
 		{
-			// TODO
-			Assert.Inconclusive();
+			CubicHexCoord cubic = new CubicHexCoord( 1, 0, -1 );
+			CubicHexCoord[] spiral = CubicHexCoord.SpiralOutward( cubic, 2, DirectionEnum.W );
+
+			Assert.That( spiral, Is.EquivalentTo( new CubicHexCoord[ 19 ] {
+				// Distance 2
+				new CubicHexCoord( -1,  2, -1 ),
+				new CubicHexCoord(  0,  2, -2 ),
+				new CubicHexCoord(  1,  2, -3 ),
+				new CubicHexCoord(  2,  1, -3 ),
+				new CubicHexCoord(  3,  0, -3 ),
+				new CubicHexCoord(  3, -1, -2 ),
+				new CubicHexCoord(  3, -2, -1 ),
+				new CubicHexCoord(  2, -2,  0 ),
+				new CubicHexCoord(  1, -2,  1 ),
+				new CubicHexCoord(  0, -1,  1 ),
+				new CubicHexCoord( -1,  0,  1 ),
+				new CubicHexCoord( -1,  1,  0 ),
+				// Distance 1
+				new CubicHexCoord(  0,  1, -1 ),
+				new CubicHexCoord(  1,  1, -2 ),
+				new CubicHexCoord(  2,  0, -2 ),
+				new CubicHexCoord(  2, -1, -1 ),
+				new CubicHexCoord(  1, -1,  0 ),
+				new CubicHexCoord(  0,  0,  0 ),
+				// Center
+				new CubicHexCoord(  1,  0, -1 )
+			} ) );
 		}
 
 		[Test]
 		public void StaticSpiralOutward()
 		{
-			// TODO
-			Assert.Inconclusive();
+			CubicHexCoord cubic = new CubicHexCoord( 1, 0, -1 );
+			CubicHexCoord[] spiral = CubicHexCoord.SpiralOutward( cubic, 2, DirectionEnum.W );
+
+			Assert.That( spiral, Is.EquivalentTo( new CubicHexCoord[ 19 ] {
+				// Center
+				new CubicHexCoord(  1,  0, -1 ),
+				// Distance 1
+				new CubicHexCoord(  0,  1, -1 ),
+				new CubicHexCoord(  1,  1, -2 ),
+				new CubicHexCoord(  2,  0, -2 ),
+				new CubicHexCoord(  2, -1, -1 ),
+				new CubicHexCoord(  1, -1,  0 ),
+				new CubicHexCoord(  0,  0,  0 ),
+				// Distance 2
+				new CubicHexCoord( -1,  2, -1 ), 
+				new CubicHexCoord(  0,  2, -2 ),
+				new CubicHexCoord(  1,  2, -3 ),
+				new CubicHexCoord(  2,  1, -3 ),
+				new CubicHexCoord(  3,  0, -3 ),
+				new CubicHexCoord(  3, -1, -2 ),
+				new CubicHexCoord(  3, -2, -1 ),
+				new CubicHexCoord(  2, -2,  0 ),
+				new CubicHexCoord(  1, -2,  1 ),
+				new CubicHexCoord(  0, -1,  1 ),
+				new CubicHexCoord( -1,  0,  1 ),
+				new CubicHexCoord( -1,  1,  0 )
+			} ) );
 		}
 		
 		#endregion

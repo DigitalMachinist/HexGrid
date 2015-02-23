@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y',['y',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_cubic_hex_coord.html#ae4bb3906bcea346ffd9dc77db7cfff9b',1,'ca.axoninteractive.Geometry.HexGrid.CubicHexCoord.y()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_float_cubic.html#a8935e0b89d4e13140ba7ff446ce9630a',1,'ca.axoninteractive.Geometry.HexGrid.FloatCubic.y()']]]
+  ['two_5fthirds',['TWO_THIRDS',['../classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html#af2031a9c0cbca5a2bbe3dc1542068204',1,'ca::axoninteractive::Geometry::Hex::HexGrid']]]
 ];

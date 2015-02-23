@@ -1,5 +1,5 @@
 ﻿<NUnitProject>
-  <Settings activeconfig="Debug" processModel="Default" domainUsage="Default" appbase="C:\Users\Jeff\Documents\__dev\git\HexGrid" />
+  <Settings activeconfig="Debug" />
   <Config name="Debug" binpathtype="Auto">
     <assembly path="HexGridTest\bin\Debug\HexGridTest.dll" />
     <assembly path="HexGridTest\bin\Release\HexGridTest.dll" />

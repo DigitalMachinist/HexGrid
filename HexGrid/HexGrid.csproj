@@ -7,7 +7,7 @@
     <ProjectGuid>{730CE1A8-6F93-424D-AAF1-057182BC21EF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ca.axoninteractive.Geometry.HexGrid</RootNamespace>
+    <RootNamespace>ca.axoninteractive.Geometry.Hex</RootNamespace>
     <AssemblyName>HexGrid</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

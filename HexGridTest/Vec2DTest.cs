@@ -10,6 +10,7 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		// The range in which floating-point numbers are consider equal.
 		public const float EPSILON = 0.000001f;
 
+
 		#region Constructors
 
 		[Test]
@@ -31,6 +32,7 @@ namespace ca.axoninteractive.Geometry.HexGridTest
 		}
 
 		#endregion
+
 
 		#region Operator Overloads
 

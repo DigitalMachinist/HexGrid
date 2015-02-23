@@ -18,6 +18,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		public float z;
 
 		#endregion
+		
+		
 		#region Constructors
 		
 		/// <summary>
@@ -33,6 +35,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+		
+		
 		#region Operator Overloads
 		
 		/// <summary>
@@ -62,8 +66,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		Vec2D 
 		operator -( Vec2D lhs, Vec2D rhs ) 
 		{
-			float x = lhs.x + rhs.x;
-			float z = lhs.z + rhs.z;
+			float x = lhs.x - rhs.x;
+			float z = lhs.z - rhs.z;
 
 			return new Vec2D( x, z );
 		}

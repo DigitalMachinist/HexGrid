@@ -19,6 +19,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		public float z;
 
 		#endregion
+		
+		
 		#region Constructors
 		
 		/// <summary>
@@ -49,6 +51,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+		
+		
 		#region Type Conversions
 		
 		/// <summary>
@@ -66,8 +70,43 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+		
+		
 		#region Instance Methods
 		
+		/// <summary>
+		/// Returns a new CubicHexCoord representing the nearest hex to this FloatCubic.
+		/// </summary>
+		/// <returns>A new CubicHexCoord representing the nearest hex to this FloatCubic.</returns>
+		public 
+		CubicHexCoord
+		Round()
+		{
+			int rx = (int)Math.Round( this.x );
+			int ry = (int)Math.Round( this.y );
+			int rz = (int)Math.Round( this.z );
+
+			int xDiff = (int)Math.Abs( rx - this.x );
+			int yDiff = (int)Math.Abs( ry - this.y );
+			int zDiff = (int)Math.Abs( rz - this.z );
+
+			if ( xDiff > yDiff && xDiff > zDiff )
+			{
+				rx = -ry - rz;
+			}
+			else if ( yDiff > zDiff )
+			{
+				ry = -rx - rz;
+			}
+			else
+			{
+				rz = -rx - ry;
+			}
+
+			return new CubicHexCoord( rx, ry, rz );
+		}
+
+
 		/// <summary>
 		/// Scale the world space by the given factor, causing q and r to change proportionally 
 		/// to factor.

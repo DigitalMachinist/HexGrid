@@ -20,18 +20,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		public int r;
 
 		#endregion
-		#region Constants
-
-		private static readonly AxialHexCoord[] DIRECTIONS = {
-			new AxialHexCoord(  1,  0 ),
-			new AxialHexCoord(  0,  1 ),
-			new AxialHexCoord( -1,  1 ),
-			new AxialHexCoord( -1,  0 ),
-			new AxialHexCoord(  0, -1 ),
-			new AxialHexCoord(  1, -1 ),
-		};
-
-		#endregion
+		
+		
 		#region Constructors
 		
 		/// <summary>
@@ -47,6 +37,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+		
+		
 		#region Type Conversions
 		
 		/// <summary>
@@ -65,6 +57,8 @@ namespace ca.axoninteractive.Geometry.Hex
 		}
 
 		#endregion
+		
+		
 		#region Operator Overloads
 		
 		/// <summary>

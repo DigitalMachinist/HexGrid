@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['parityenum',['ParityEnum',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex_grid.html#af6431f0a86d59205e4f9d7743b7f4dfa',1,'ca::axoninteractive::Geometry::HexGrid']]],
+  ['parityenum',['ParityEnum',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#ad0639fd685d6c0dabe3d8b5ad82a8b4d',1,'ca::axoninteractive::Geometry::Hex']]],
   ['parityenum_2ecs',['ParityEnum.cs',['../_parity_enum_8cs.html',1,'']]],
-  ['pointtocubic',['PointToCubic',['../classca_1_1axoninteractive_1_1_geometry_1_1_hex_grid_1_1_hex_grid.html#adbfa876651b16017c0090305fcafc38c',1,'ca::axoninteractive::Geometry::HexGrid::HexGrid']]]
+  ['pointtocubic',['PointToCubic',['../classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html#a57cb731d2c2af90b861e6dc18fdbc3c4',1,'ca::axoninteractive::Geometry::Hex::HexGrid']]]
 ];
