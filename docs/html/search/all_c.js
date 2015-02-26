@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['q',['q',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_axial_hex_coord.html#a3e598aa7106bda5fae45d3c72b62f07c',1,'ca.axoninteractive.Geometry.Hex.AxialHexCoord.q()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_float_axial.html#a302dfd83ed44787f6fcccd3bdfa76a02',1,'ca.axoninteractive.Geometry.Hex.FloatAxial.q()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_offset_hex_coord.html#a666c10f0077f94ab86984b006f0a43b9',1,'ca.axoninteractive.Geometry.Hex.OffsetHexCoord.q()']]]
+  ['parityenum',['ParityEnum',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#ad0639fd685d6c0dabe3d8b5ad82a8b4d',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['parityenum_2ecs',['ParityEnum.cs',['../_parity_enum_8cs.html',1,'']]],
+  ['pointtocubic',['PointToCubic',['../classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html#a57cb731d2c2af90b861e6dc18fdbc3c4',1,'ca::axoninteractive::Geometry::Hex::HexGrid']]],
+  ['pointtodirectioninhex',['PointToDirectionInHex',['../classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html#ad0fe4f4043b3f46b0fc8960e1cd9974a',1,'ca::axoninteractive::Geometry::Hex::HexGrid']]]
 ];

@@ -50,6 +50,7 @@
     <Compile Include="ParityEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RotationEnum.cs" />
+    <Compile Include="TriangleEnum.cs" />
     <Compile Include="Vec2D.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

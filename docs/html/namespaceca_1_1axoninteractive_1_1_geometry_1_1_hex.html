@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">HexGrid
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">A logical hex-grid implementation based on Amit Patel&#39;s examples at http://www.redblobgames.com/grids/hexagons/.</div>
   </td>
@@ -134,7 +134,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the position of a hex within a hex grid using the Odd-Row offset grid layout scheme. This means that all hexes are pointy-topped and each odd row is offset in the positive r direction by half of a hex width. Offset coordinates are a natural fit for storage in a rectangular array of memory, and can be an ideal storage format for hexes.  <a href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_offset_hex_coord.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html">Vec2D</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple 2D vector implementation to store coordinates on the x-z cartesian plane. This doesn't really do anything important. It's just a container used by <a class="el" href="classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html" title="A logical hex-grid implementation based on Amit Patel&#39;s examples at http://www.redblobgames.com/grids/hexagons/. Creating a new hex grid does not create an array in memory or any other concrete data. It provides a service to query for data such as what 2D point at which a given hex index appears at or which hex a given 2D point is over. ">HexGrid</a> to return world position values pack to the caller.  <a href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A simple 2D vector implementation to store coordinates on the x-y cartesian plane. This doesn't really do anything important. It's just a container used by <a class="el" href="classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html" title="A logical hex-grid implementation based on Amit Patel&#39;s examples at http://www.redblobgames.com/grids/hexagons/. Creating a new hex grid does not create an array in memory or any other concrete data. It provides a service to query for data such as what 2D point at which a given hex index appears at or which hex a given 2D point is over. ">HexGrid</a> to return world position values pack to the caller.  <a href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -185,6 +185,10 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a099158f11d7ea6c2704a284b69593cc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a rotation either clockwise or counter-clockwise around a central point. Rotations must occur in exact 60 degree intervals, so each 60 degree interval from 60 through 300 degrees is represented in either direction (0 and 360 are not as they represent no rotation).  <a href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a099158f11d7ea6c2704a284b69593cc9">More...</a><br /></td></tr>
 <tr class="separator:a099158f11d7ea6c2704a284b69593cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebdea4fa7bd21d9a72cf9fe72e5a3f4d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#aebdea4fa7bd21d9a72cf9fe72e5a3f4d">TriangleEnum</a> { <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#aebdea4fa7bd21d9a72cf9fe72e5a3f4daa4ffdcf0dc1f31b9acaf295d75b51d00">TriangleEnum.Top</a>, 
+<a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#aebdea4fa7bd21d9a72cf9fe72e5a3f4da2ad9d63b69c4a10a5cc9cad923133bc4">TriangleEnum.Bottom</a>
+ }</td></tr>
+<tr class="separator:aebdea4fa7bd21d9a72cf9fe72e5a3f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a99e444b6b1dfbfbd92f71975469f1a16"></a>
@@ -299,13 +303,31 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aebdea4fa7bd21d9a72cf9fe72e5a3f4d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#aebdea4fa7bd21d9a72cf9fe72e5a3f4d">ca.axoninteractive.Geometry.Hex.TriangleEnum</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aebdea4fa7bd21d9a72cf9fe72e5a3f4daa4ffdcf0dc1f31b9acaf295d75b51d00"></a>Top&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aebdea4fa7bd21d9a72cf9fe72e5a3f4da2ad9d63b69c4a10a5cc9cad923133bc4"></a>Bottom&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceca.html">ca</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive.html">axoninteractive</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry.html">Geometry</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html">Hex</a></li>
-    <li class="footer">Generated on Mon Feb 23 2015 11:10:34 for HexGrid by
+    <li class="footer">Generated on Thu Feb 26 2015 16:35:47 for HexGrid by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9 </li>
   </ul>

@@ -24,6 +24,7 @@ var dir_3cb425e2b7a3497cb33453c12e0f9dfb =
     ] ],
     [ "ParityEnum.cs", "_parity_enum_8cs.html", "_parity_enum_8cs" ],
     [ "RotationEnum.cs", "_rotation_enum_8cs.html", "_rotation_enum_8cs" ],
+    [ "TriangleEnum.cs", "_triangle_enum_8cs.html", "_triangle_enum_8cs" ],
     [ "Vec2D.cs", "_vec2_d_8cs.html", [
       [ "Vec2D", "structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html", "structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d" ]
     ] ]

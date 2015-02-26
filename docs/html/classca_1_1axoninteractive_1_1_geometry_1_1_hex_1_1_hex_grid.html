@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">HexGrid
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">A logical hex-grid implementation based on Amit Patel&#39;s examples at http://www.redblobgames.com/grids/hexagons/.</div>
   </td>
@@ -133,11 +133,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a57cb731d2c2af90b861e6dc18fdbc3c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html">CubicHexCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html#a57cb731d2c2af90b861e6dc18fdbc3c4">PointToCubic</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html">Vec2D</a> point)</td></tr>
 <tr class="memdesc:a57cb731d2c2af90b861e6dc18fdbc3c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the hex that contains the given point on the x-z cartesian plane.  <a href="#a57cb731d2c2af90b861e6dc18fdbc3c4">More...</a><br /></td></tr>
 <tr class="separator:a57cb731d2c2af90b861e6dc18fdbc3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0fe4f4043b3f46b0fc8960e1cd9974a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a1ef0818b3b3a8024b14f89e80437c250">DirectionEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html#ad0fe4f4043b3f46b0fc8960e1cd9974a">PointToDirectionInHex</a> (<a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html">Vec2D</a> point)</td></tr>
+<tr class="memdesc:ad0fe4f4043b3f46b0fc8960e1cd9974a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a DirectionEnum identifying the triangle by which the given point is contained.  <a href="#ad0fe4f4043b3f46b0fc8960e1cd9974a">More...</a><br /></td></tr>
+<tr class="separator:ad0fe4f4043b3f46b0fc8960e1cd9974a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a15db51df8b8eda53b71a8f0d45d3cbf4"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html#a15db51df8b8eda53b71a8f0d45d3cbf4">SQRT_3</a> = 1.7320508075688772935274463415059f</td></tr>
 <tr class="separator:a15db51df8b8eda53b71a8f0d45d3cbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe2070afda46b0c992be08657cf32f4"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html#a7fe2070afda46b0c992be08657cf32f4">ONE_THIRD</a> = 1f / 3f</td></tr>
+<tr class="separator:a7fe2070afda46b0c992be08657cf32f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2031a9c0cbca5a2bbe3dc1542068204"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html#af2031a9c0cbca5a2bbe3dc1542068204">TWO_THIRDS</a> = 2f / 3f</td></tr>
 <tr class="separator:af2031a9c0cbca5a2bbe3dc1542068204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -146,9 +151,15 @@ Properties</h2></td></tr>
 <tr class="memitem:ae92f66c492f7dacc513dc8f4f9f57735"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html#ae92f66c492f7dacc513dc8f4f9f57735">HexRadius</a><code> [get]</code></td></tr>
 <tr class="memdesc:ae92f66c492f7dacc513dc8f4f9f57735"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance from the center of a hex to one of its vertices.  <a href="#ae92f66c492f7dacc513dc8f4f9f57735">More...</a><br /></td></tr>
 <tr class="separator:ae92f66c492f7dacc513dc8f4f9f57735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc2f8d1bddbee4c63c010b043a429b54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html">Vec2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html#acc2f8d1bddbee4c63c010b043a429b54">Slice</a><code> [get]</code></td></tr>
+<tr class="memdesc:acc2f8d1bddbee4c63c010b043a429b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dimensions of a single "slice" of a hex, where each hex is bisected horizontally and then quartered vertically to produce 8 equally-sized slices.  <a href="#acc2f8d1bddbee4c63c010b043a429b54">More...</a><br /></td></tr>
+<tr class="separator:acc2f8d1bddbee4c63c010b043a429b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A logical hex-grid implementation based on Amit Patel's examples at <a href="http://www.redblobgames.com/grids/hexagons/">http://www.redblobgames.com/grids/hexagons/</a>. Creating a new hex grid does not create an array in memory or any other concrete data. It provides a service to query for data such as what 2D point at which a given hex index appears at or which hex a given 2D point is over. </p>
+<p>================== </p><h1>Coordinate Systems </h1>
+<p>See <a href="http://www.redblobgames.com/grids/hexagons/">http://www.redblobgames.com/grids/hexagons/</a> for a complete explanation of Axial, Cubic and Offset coordinate spaces. This hex grid implementation orients hexes in a pointy-topped odd-row offset configuration, and otherwise uses the same axes and conventions as those in Amit Patel's examples.</p>
+<p>It should be noted that when converting from point to hex space, the x-axis is the horizontal axis with values increasing from left to right, and the y-axis is the vertical axis with values increasing from top to bottom (POSITIVE Y IS DOWNWARD). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a92ee3d1dde84186b3aa0d82ca58b3daa"></a>
 <div class="memitem">
@@ -196,7 +207,7 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html" title="A simple 2D vector implementation to store coordinates on the x-z cartesian plane. This doesn&#39;t really do anything important. It&#39;s just a container used by HexGrid to return world position values pack to the caller. ">Vec2D</a> point of the hex's position on the x-z cartesian plane.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html" title="A simple 2D vector implementation to store coordinates on the x-y cartesian plane. This doesn&#39;t really do anything important. It&#39;s just a container used by HexGrid to return world position values pack to the caller. ">Vec2D</a> point of the hex's position on the x-y cartesian plane.</dd></dl>
 
 </div>
 </div>
@@ -221,7 +232,7 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html" title="A simple 2D vector implementation to store coordinates on the x-z cartesian plane. This doesn&#39;t really do anything important. It&#39;s just a container used by HexGrid to return world position values pack to the caller. ">Vec2D</a> point of the hex's position on the x-z cartesian plane.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html" title="A simple 2D vector implementation to store coordinates on the x-y cartesian plane. This doesn&#39;t really do anything important. It&#39;s just a container used by HexGrid to return world position values pack to the caller. ">Vec2D</a> point of the hex's position on the x-y cartesian plane.</dd></dl>
 
 </div>
 </div>
@@ -242,7 +253,7 @@ Properties</h2></td></tr>
 <p>Get the hex that contains the given point on the x-z cartesian plane. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">point</td><td>A point on the x-z cartesian plane.</td></tr>
+    <tr><td class="paramname">point</td><td>A point on the x-y cartesian plane.</td></tr>
   </table>
   </dd>
 </dl>
@@ -250,7 +261,44 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad0fe4f4043b3f46b0fc8960e1cd9974a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a1ef0818b3b3a8024b14f89e80437c250">DirectionEnum</a> ca.axoninteractive.Geometry.Hex.HexGrid.PointToDirectionInHex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html">Vec2D</a>&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a DirectionEnum identifying the triangle by which the given point is contained. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>A point on the x-y cartesian plane.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A DirectionEnum representing the direction of the triangle that the point is contained by within the hex (relative to the center of the hex).</dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a7fe2070afda46b0c992be08657cf32f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float ca.axoninteractive.Geometry.Hex.HexGrid.ONE_THIRD = 1f / 3f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a15db51df8b8eda53b71a8f0d45d3cbf4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -298,6 +346,28 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="acc2f8d1bddbee4c63c010b043a429b54"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html">Vec2D</a> ca.axoninteractive.Geometry.Hex.HexGrid.Slice</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The dimensions of a single "slice" of a hex, where each hex is bisected horizontally and then quartered vertically to produce 8 equally-sized slices. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>HexGrid/<a class="el" href="_hex_grid_8cs.html">HexGrid.cs</a></li>
 </ul>
@@ -307,7 +377,7 @@ Properties</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceca.html">ca</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive.html">axoninteractive</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry.html">Geometry</a></li><li class="navelem"><a class="el" href="namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html">Hex</a></li><li class="navelem"><a class="el" href="classca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_hex_grid.html">HexGrid</a></li>
-    <li class="footer">Generated on Mon Feb 23 2015 11:10:34 for HexGrid by
+    <li class="footer">Generated on Thu Feb 26 2015 16:35:47 for HexGrid by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9 </li>
   </ul>

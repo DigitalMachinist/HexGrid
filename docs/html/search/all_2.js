@@ -1,13 +1,20 @@
 var searchData=
 [
-  ['diagonal',['Diagonal',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#a62f8277610956bb4e47ec8eddb9d44b7',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]],
-  ['diagonaldiff',['DiagonalDiff',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#afc5cad6a7c27663e4c38dec6d4bc603a',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]],
-  ['diagonalenum',['DiagonalEnum',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a99e444b6b1dfbfbd92f71975469f1a16',1,'ca::axoninteractive::Geometry::Hex']]],
-  ['diagonalenum_2ecs',['DiagonalEnum.cs',['../_diagonal_enum_8cs.html',1,'']]],
-  ['diagonals',['Diagonals',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#aed76273adaeff038230875c2cfcff0f8',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]],
-  ['directiondiff',['DirectionDiff',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#a036986d689e0ac07bb67c4bee665e8e6',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]],
-  ['directionenum',['DirectionEnum',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a1ef0818b3b3a8024b14f89e80437c250',1,'ca::axoninteractive::Geometry::Hex']]],
-  ['directionenum_2ecs',['DirectionEnum.cs',['../_direction_enum_8cs.html',1,'']]],
-  ['distance',['Distance',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#a4ee0fa6eb47767e93c1eb16ac4f7ae60',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]],
-  ['distanceto',['DistanceTo',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#a159bb3a8b896f8560764566c3d62f481',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]]
+  ['axoninteractive',['axoninteractive',['../namespaceca_1_1axoninteractive.html',1,'ca']]],
+  ['ca',['ca',['../namespaceca.html',1,'']]],
+  ['ccw_5f120',['CCW_120',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a099158f11d7ea6c2704a284b69593cc9a015dbea387f0c079be460bda1976b1f1',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['ccw_5f180',['CCW_180',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a099158f11d7ea6c2704a284b69593cc9a45e3c12f9fe5d96057a0e6b255d59bc2',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['ccw_5f240',['CCW_240',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a099158f11d7ea6c2704a284b69593cc9a24dd860bb21c5fa7038a240ca84dea38',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['ccw_5f300',['CCW_300',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a099158f11d7ea6c2704a284b69593cc9af396c9700cc31fbeddbd04d649dc1172',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['ccw_5f60',['CCW_60',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a099158f11d7ea6c2704a284b69593cc9a3658e9cc0a5f6aad6a9af69b3d431a85',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['cubichexcoord',['CubicHexCoord',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['cubichexcoord',['CubicHexCoord',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#a6ed262a81089e3b97624433ed40426a2',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]],
+  ['cubichexcoord_2ecs',['CubicHexCoord.cs',['../_cubic_hex_coord_8cs.html',1,'']]],
+  ['cw_5f120',['CW_120',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a099158f11d7ea6c2704a284b69593cc9afefd711556592ae10db377d42b6006de',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['cw_5f180',['CW_180',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a099158f11d7ea6c2704a284b69593cc9a7a5c213c06c7ad233e48e9e258591ffc',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['cw_5f240',['CW_240',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a099158f11d7ea6c2704a284b69593cc9a3baa44e12db59366297f2b9b6b865fae',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['cw_5f300',['CW_300',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a099158f11d7ea6c2704a284b69593cc9ae4ebba70476642f4dfdc3f22260c65be',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['cw_5f60',['CW_60',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a099158f11d7ea6c2704a284b69593cc9a8f87c2ce062a98ba8fb19dd93273df4e',1,'ca::axoninteractive::Geometry::Hex']]],
+  ['geometry',['Geometry',['../namespaceca_1_1axoninteractive_1_1_geometry.html',1,'ca::axoninteractive']]],
+  ['hex',['Hex',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html',1,'ca::axoninteractive::Geometry']]]
 ];

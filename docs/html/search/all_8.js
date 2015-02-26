@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['line',['Line',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#ad1b0532f93809f67692ef003dcf31661',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]],
-  ['lineto',['LineTo',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#a295c8fa00c5205f3b82f763458a6c7f8',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]]
+  ['intersectranges',['IntersectRanges',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#ae8f0f3c027618d1a5c0c33cf0631edd7',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]],
+  ['isoddrow',['IsOddRow',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_offset_hex_coord.html#ab7291207d53d6628b7a0520b09555321',1,'ca::axoninteractive::Geometry::Hex::OffsetHexCoord']]]
 ];

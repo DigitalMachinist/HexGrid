@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['n',['N',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a99e444b6b1dfbfbd92f71975469f1a16a8d9c307cb7f3c4a32822a51922d1ceaa',1,'ca::axoninteractive::Geometry::Hex']]],
-  ['ne',['NE',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a1ef0818b3b3a8024b14f89e80437c250adc33066c3993e0d50896e533fd692ce0',1,'ca::axoninteractive::Geometry::Hex']]],
-  ['neighbor',['Neighbor',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#aaebbab4d67e4e13cbaa56eca8c43b458',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]],
-  ['neighbors',['Neighbors',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#a1b311f13804382295eab4f2d71bf6917',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]],
-  ['nw',['NW',['../namespaceca_1_1axoninteractive_1_1_geometry_1_1_hex.html#a1ef0818b3b3a8024b14f89e80437c250a7f39ac71e81132daad44925b3bdfde5a',1,'ca::axoninteractive::Geometry::Hex']]]
+  ['length',['Length',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_vec2_d.html#a823bd71cd031cb58c0813e4bc350b9b8',1,'ca::axoninteractive::Geometry::Hex::Vec2D']]],
+  ['line',['Line',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#ad1b0532f93809f67692ef003dcf31661',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]],
+  ['lineto',['LineTo',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_cubic_hex_coord.html#a295c8fa00c5205f3b82f763458a6c7f8',1,'ca::axoninteractive::Geometry::Hex::CubicHexCoord']]]
 ];

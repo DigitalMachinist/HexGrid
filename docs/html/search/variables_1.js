@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['r',['r',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_axial_hex_coord.html#aad09ab074eb6d86d675c26edcb6cd9cd',1,'ca.axoninteractive.Geometry.Hex.AxialHexCoord.r()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_float_axial.html#a2e3f908780aca1283e5f8793f9839279',1,'ca.axoninteractive.Geometry.Hex.FloatAxial.r()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_offset_hex_coord.html#a8035f9715bf42381fdc8869843688a6b',1,'ca.axoninteractive.Geometry.Hex.OffsetHexCoord.r()']]]
+  ['q',['q',['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_axial_hex_coord.html#a3e598aa7106bda5fae45d3c72b62f07c',1,'ca.axoninteractive.Geometry.Hex.AxialHexCoord.q()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_float_axial.html#a302dfd83ed44787f6fcccd3bdfa76a02',1,'ca.axoninteractive.Geometry.Hex.FloatAxial.q()'],['../structca_1_1axoninteractive_1_1_geometry_1_1_hex_1_1_offset_hex_coord.html#a666c10f0077f94ab86984b006f0a43b9',1,'ca.axoninteractive.Geometry.Hex.OffsetHexCoord.q()']]]
 ];

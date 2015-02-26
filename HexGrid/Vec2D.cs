@@ -6,7 +6,7 @@ using System.Text;
 namespace ca.axoninteractive.Geometry.Hex
 {
 	/// <summary>
-	/// A simple 2D vector implementation to store coordinates on the x-z cartesian plane.
+	/// A simple 2D vector implementation to store coordinates on the x-y cartesian plane.
 	/// This doesn't really do anything important. It's just a container used by HexGrid to 
 	/// return world position values pack to the caller.
 	/// </summary>
@@ -15,7 +15,7 @@ namespace ca.axoninteractive.Geometry.Hex
 		#region Members
 
 		public float x;
-		public float z;
+		public float y;
 
 		#endregion
 		
@@ -23,15 +23,15 @@ namespace ca.axoninteractive.Geometry.Hex
 		#region Constructors
 		
 		/// <summary>
-		/// Create a new Vec2D given the coordinates x and z (on the world x-z plane).
+		/// Create a new Vec2D given the coordinates x and z (on the world x-y plane).
 		/// </summary>
 		/// <param name="x">The position of this point on the x-axis.</param>
-		/// <param name="z">The position of this point on the z-axis.</param>
+		/// <param name="y">The position of this point on the y-axis.</param>
 		public 
-		Vec2D( float x, float z )
+		Vec2D( float x, float y )
 		{
 			this.x = x;
-			this.z = z;
+			this.y = y;
 		}
 
 		#endregion
@@ -50,9 +50,9 @@ namespace ca.axoninteractive.Geometry.Hex
 		operator +( Vec2D lhs, Vec2D rhs ) 
 		{
 			float x = lhs.x + rhs.x;
-			float z = lhs.z + rhs.z;
+			float y = lhs.y + rhs.y;
 
-			return new Vec2D( x, z );
+			return new Vec2D( x, y );
 		}
 		
 
@@ -67,9 +67,35 @@ namespace ca.axoninteractive.Geometry.Hex
 		operator -( Vec2D lhs, Vec2D rhs ) 
 		{
 			float x = lhs.x - rhs.x;
-			float z = lhs.z - rhs.z;
+			float y = lhs.y - rhs.y;
 
-			return new Vec2D( x, z );
+			return new Vec2D( x, y );
+		}
+
+		#endregion
+
+
+		#region Instance Methods
+		
+		/// <summary>
+		/// Returns the distance from this Vec2D to the given other.
+		/// </summary>
+		/// <param name="other">Any other Vec2D.</param>
+		/// <returns>A float representing the distance from this Vec2D to the given other.
+		/// </returns>
+		public float Distance( Vec2D other )
+		{
+			return ( other - this ).Length();
+		}
+		
+
+		/// <summary>
+		/// Returns float representing the length of this Vec2D.
+		/// </summary>
+		/// <returns>A float representing the length of this Vec2D.</returns>
+		public float Length()
+		{
+			return (float)Math.Sqrt( this.x * this.x + this.y * this.y );
 		}
 
 		#endregion
