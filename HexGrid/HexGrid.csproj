@@ -39,20 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AxialHexCoord.cs" />
-    <Compile Include="CubicHexCoord.cs" />
-    <Compile Include="DiagonalEnum.cs" />
-    <Compile Include="DirectionEnum.cs" />
-    <Compile Include="FloatAxial.cs" />
-    <Compile Include="FloatCubic.cs" />
-    <Compile Include="HexGrid.cs" />
-    <Compile Include="OffsetHexCoord.cs" />
-    <Compile Include="ParityEnum.cs" />
+    <Compile Include="Logical\AxialHexCoord.cs" />
+    <Compile Include="Logical\CubicHexCoord.cs" />
+    <Compile Include="Enums\DiagonalEnum.cs" />
+    <Compile Include="Enums\DirectionEnum.cs" />
+    <Compile Include="Logical\FloatAxial.cs" />
+    <Compile Include="Logical\FloatCubic.cs" />
+    <Compile Include="Logical\HexGrid.cs" />
+    <Compile Include="Logical\OffsetHexCoord.cs" />
+    <Compile Include="Enums\ParityEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RotationEnum.cs" />
-    <Compile Include="TriangleEnum.cs" />
+    <Compile Include="Enums\RotationEnum.cs" />
+    <Compile Include="Enums\TriangleEnum.cs" />
     <Compile Include="Vec2D.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

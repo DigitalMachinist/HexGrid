@@ -9,7 +9,6 @@ namespace ca.axoninteractive.Geometry.Hex
 	/// array in memory or any other concrete data. It provides a service to query for data such as
 	/// what 2D point at which a given hex index appears at or which hex a given 2D point is over.
 	///
-	/// ==================
 	/// Coordinate Systems
 	/// ==================
 	/// 
