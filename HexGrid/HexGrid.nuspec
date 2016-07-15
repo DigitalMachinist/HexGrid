@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>HexGrid</title>
+    <authors>Jeff Rose</authors>
+    <owners>Jeff Rose</owners>
+    <licenseUrl>https://raw.githubusercontent.com/DigitalMachinist/HexGrid/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/DigitalMachinist/HexGrid</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/DigitalMachinist/HexGrid/master/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Copyright 2015 Jeff Rose</copyright>
+    <tags>hex grid map geometry 2d</tags>
+  </metadata>
+</package>

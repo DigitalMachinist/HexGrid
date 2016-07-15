@@ -9,6 +9,8 @@ This is a library designed to make computing hexagonal grid geometry straightfor
 
 This being said, this is a *logical* hex grid library. It does not actually lay hexes out in memory. It is purely a mathematical model to make that easier, should you need to do it. This, of course, means that this library will not consume large amounts of memory unless you use it to do that yourself.
 
+*A NuGet package of HexGrid (not including test libraries) is [now available for download](https://www.nuget.org/packages/HexGrid/1.0.0)!*
+
 ## Documentation
 
 Doxygen HTML docs are provided and are relatively complete.
